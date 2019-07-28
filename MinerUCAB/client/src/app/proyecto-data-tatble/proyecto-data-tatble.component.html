@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+        <thead>
+          <tr>        
+            <th>Id</th>
+            <th>Cantidad de Carbón a extraer</th> 
+            <th>Iniciar Proyecto</th>          
+            <th>Terminar Proyecto</th>
+            <th>Ver Etapas</th>
+            <th>Edit / Delete</th>               
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let project of proyectos">
+            <td>{{project.id}}</td>
+            <td>{{project.cantidad}}</td> 
+            <td><button class="links" (click)="iniciarProyecto(project)"><i class="fas fa-plus"></i></button></td>
+            <td><button class="links" (click)="terminarProyecto(project)"><i class="fas fa-plus"></i></button></td>
+            <td><button class="links" (click)="verEtapas(project)"><i class="fas fa-plus"></i></button></td>   
+            <td><button class="links" (click)="EditarProyecto(project)"><i class="fas fa-edit"></i></button>  /  <button class="links" (click)="deleteProyecto(proyecto)"><i class="far fa-trash-alt"></i></button></td>               
+          </tr>               
+        </tbody>    
+    </table>
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

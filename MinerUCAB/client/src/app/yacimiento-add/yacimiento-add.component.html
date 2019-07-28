@@ -1,0 +1,181 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+    <h1>{{caso}} Yacimiento</h1>
+
+    <hr><br>
+
+    <div class="row">
+
+      <div class="col-sm-12 col-md-6 col-bg-4">
+        <label>Nombre del Yacimiento</label>
+        <input class="form-control form-control-md" type="text" name="nombre" [(ngModel)]="yacimiento[0].nombre" placeholder="Nombre">
+        <br>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-bg-4">
+        <label>Tamaño del yacimiento</label>
+        <input class="form-control form-control-md" type="text" name="size" [(ngModel)]="yacimiento[0].size" placeholder="Nombre">
+        <br>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-bg-4">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Seleccionar tipo de Yacimiento</label>
+          <select class="form-control col-md-5" name="tipo" [(ngModel)]="yacimiento[0].tipo" id="tipoMineral" [disabled]="false">                          
+            <option *ngFor="let tipo of tipos">
+              <div>{{tipo}}</div>
+            </option>                          
+          </select>
+        </div>
+      </div>            
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-bg-4">
+        <label>Origen (SOLO PARA YACIMIENTOS DE TIPO AUTOCTONOS)</label>
+        <input class="form-control form-control-md" type="text" name="origen" [(ngModel)]="yacimiento[0].origen" placeholder="origen">
+        <br>
+      </div>            
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-bg-4">
+        <label>Tipo de transporte (SOLO PARA YACIMIENTOS DE TIPO ALOCTONOS)</label>
+        <input class="form-control form-control-md" type="text" name="transporte" [(ngModel)]="yacimiento[0].tipo_transporte" placeholder="Transporte">
+        <br>
+      </div>
+    </div>
+
+
+
+
+    <!----<div class="row">
+      <div class="col-md-4" *ngFor="let estado of estados">
+        <p>{{estado.l_nombre}}</p>
+      </div>
+    </div>-->
+
+    <!----<div class="row">
+      <div class="col-md-4" *ngFor="let municipio of municipios">
+        <p>{{municipio.l_nombre}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" *ngFor="let parroquia of parroquias">
+          <p>{{parroquia.l_nombre}}</p>
+        </div>
+      </div> -->
+
+
+
+
+    <!--PROBANDO-->
+
+      <h3>Dirección del Yacimiento</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Estado</label>
+            <select class="form-control" name="estado" [(ngModel)]="estado[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let estado of estados" style="color:black">
+                <div>{{estado.l_clave}}-{{estado.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="margin-top: 6px" (click)="buscarMunicipios()">
+            Desplegar Municipios
+          </button>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Municipio</label>
+            <select class="form-control" name="municipio" [(ngModel)]="municipio[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let municipio of municipios">
+                <div>{{municipio.l_clave}}-{{municipio.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="margin-top: 6px" (click)="buscarParroquias()">
+            Desplegar Parroquias
+          </button>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Parroquia</label>
+            <select class="form-control" name="parroquia" [(ngModel)]="parroquia[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let parroquia of parroquias">
+                <div>{{parroquia.l_clave}}-{{parroquia.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+        </div>        
+      </div>
+      <br><br>
+
+    <!---------------------->
+
+
+
+
+
+
+<!----
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-bg-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccionar Estado donde se ubica</label>
+            <select class="form-control col-md-5" name="estado" [(ngModel)]="estado[0].nombre" id="exampleFormControlSelect1" [disabled]="false">              
+                <option>Escoger Opción</option>
+              <option *ngFor="let estado of estados" style="color:black">
+                <div>{{estado.l_clave}}-{{estado.l_nombre}}</div>
+              </option>                            
+            </select>            
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="margin-top: 6px" (click)="buscarMunicipios()">
+              Desplegar Municipios
+            </button>
+            <br><br>
+            
+            <div class="collapse" id="collapseExample">
+              <label for="exampleFormControlSelect2">Seleccionar Municipio donde se ubica</label>
+              <select class="form-control col-md-5" name="municipio" [(ngModel)]="municipio[0].nombre" id="exampleFormControlSelect2" [disabled]="false">              
+                  <option>Escoger Opción</option>
+                <option *ngFor="let municipio of municipios">
+                  <div>{{municipio.l_clave}}-{{municipio.l_nombre}}</div>
+                </option>                            
+              </select>            
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" style="margin-top: 6px" (click)="buscarParroquias()">
+                Desplegar Parroquias
+              </button>  
+            </div>
+            <br>
+
+            <div class="collapse" id="collapseExample2">
+              <label for="exampleFormControlSelect3">Seleccionar Parroquia donde se ubica</label>
+              <select class="form-control col-md-5" name="parroquia" [(ngModel)]="parroquia[0].id" id="exampleFormControlSelect3" [disabled]="false">              
+                <option>Escoger Opción</option>
+                <option *ngFor="let parroquia of parroquias">
+                  <div>{{parroquia.l_nombre}}</div>
+                </option>                            
+              </select>
+            </div>
+          </div>
+        </div>
+    </div>  -->
+ 
+    <button type="button" class="btn btn-primary" (click)="agregarYacimiento()">{{caso}}</button>
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

@@ -1,0 +1,15 @@
+{
+    "name": "invoice-data",
+    "creationDate": {
+        "$$date": 1563139353053
+    },
+    "modificationDate": {
+        "$$date": 1563139353053
+    },
+    "folder": {
+        "shortid": "Mav7ZHN"
+    },
+    "_id": "3CKrvDJAqZ3G03A6",
+    "shortid": "nIRxGXW",
+    "$entitySet": "data"
+}

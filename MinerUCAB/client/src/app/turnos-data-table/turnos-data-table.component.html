@@ -1,0 +1,66 @@
+<app-header></app-header>
+<br>
+
+<div *ngIf="vista == 'AsociarEH'" class="container">
+
+    <h1>Asignar Turnos a Empleado</h1>
+  
+    <hr><br>
+
+    <p>A continuación, se le presenta una tabla con todas las opciones de horarios. Cabe destacar que no se le puede agregar todos los horarios a un mismo Empleado.</p>
+    <p>Debe primero seleccionar el día y luego un turno de la tabla.</p>
+    <p>Una vez haya terminado de asignar turnos, presione el boton de Finalizar</p>
+
+    <b>Seleccionar Horario</b>
+
+</div>
+
+
+<div class="container">
+  <div *ngIf="loading == true" class="div">
+    <h3>Cargando Información</h3>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>   
+  </div>
+</div>
+
+<div class="container">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+      <thead>
+        <tr>        
+          <th>Día</th>
+          <th>Hora Inicio</th>
+          <th>Hora Fin</th> 
+          <th *ngIf="vista == ''">Edit / Delete</th>
+          <th *ngIf="vista == 'AsociarEH'">Seleccionar</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let turno of turnos">
+            <td>{{turno.dia}}</td>
+            <td>{{turno.inicio}}</td>  
+            <td>{{turno.fin}}</td>
+            <td *ngIf="vista == ''"><a [routerLink]="['/turno/edit', turno.id]" ><i class="fas fa-edit"></i></a>  /  <a href="#"><i class="far fa-trash-alt"></i></a></td>
+            <td *ngIf="vista == 'AsociarEH'"><button class="links" (click)="addEmpTurno(turno)"><i class="fas fa-edit"></i></button></td>
+          </tr>               
+        </tbody>    
+    </table>  
+  
+    <br>
+  
+    
+        <button *ngIf="vista == ''" class="links" (click)="gotoAgregarTurno()">
+            <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nuevo Turno</p>        
+        </button>
+        
+        <button *ngIf="vista == 'AsociarEH'" class="links" (click)="finalizar()">
+            <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Finalizar</p>        
+        </button>    
+      
+  
+  </div>
+  
+  <br>
+  
+  <app-footer></app-footer>

@@ -1,0 +1,69 @@
+<app-header></app-header>
+<br>
+
+<div *ngIf="vista == 'Compra'" class="container">
+
+  <h1>Comprar Minerales a Aliados</h1>
+
+  <hr><br>
+
+  <p>A continuación se muestra una tabla con todos los aliados que tiene MinerUCAB registrados en su Base de Datos. Por favor, seleccione el Aliado al que desea efectuarle una compra.</p>
+
+</div>
+
+<div class="container">
+    <div *ngIf="loading == true" class="div">
+      <h3>Cargando Información</h3>
+      <div class="spinner-border text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>   
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div *ngIf="vista != ''" class="div">
+    <br>
+    <label><b>Seleccionar Aliado</b></label>    
+  </div>
+
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+      <thead>
+        <tr>        
+          <th>Nombre</th>
+          <!----<th>Estado donde se ubica</th> -->
+          <th *ngIf="vista == ''">Edit / Delete</th>
+          <th *ngIf="vista == 'Compra'">Select</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let aliado of aliados">
+          <td>{{aliado.nombre}}</td>
+          <!----<td>{{aliado.lugar}}</td>      -->
+          <!----<td *ngIf="vista == ''"><a [routerLink]="['/aliados/edit', aliado.id]" ><i class="fas fa-edit"></i></a>  /  <button class="links" (click)="deleteAliado(aliado)"><i class="far fa-trash-alt"></i></button></td>-->
+          <!----<td *ngIf="vista == 'AsociarMP'"><button class="links" (click)="asociar(mineral.id, mineral.costo)"><i class="fas fa-plus-circle"></i></button></td>
+          <td *ngIf="vista == 'AsociarYM'"><button class="links" (click)="asociar(mineral.id, 0)"><i class="fas fa-plus-circle"></i></button></td>-->
+          <td *ngIf="vista == 'Compra'"><button class="links" (click)="gotoMinerales(aliado)"><i class="fas fa-plus-circle"></i></button></td>
+        </tr>               
+      </tbody>    
+    </table>
+  
+  
+  <br>
+
+  
+    <button *ngIf="vista == ''" class="links" (click)="gotoAgregarAliado()">
+      <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nuevo Aliado</p>        
+    </button>
+
+    <button *ngIf="vista != ''" class="btn btn-primary" (click)="gotoInicio()">
+      Volver a Inicio
+    </button>
+    
+
+</div>
+
+
+<br>
+
+<app-footer></app-footer>

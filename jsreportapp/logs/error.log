@@ -1,0 +1,18 @@
+2019-07-15T00:23:53.874Z - error: Error when processing OData PATCH: /odata/templates(rfltYKXDwlkHaCBF) Error: Entity (_id: rfltYKXDwlkHaCBF) was modified previously by another source
+    at module.exports (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-core\lib\reporter.js:288:12)
+    at AsyncFunction.col.beforeUpdateListeners.insert (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-studio\lib\studio.js:336:30)
+    at runNextTicks (internal/process/task_queues.js:52:5)
+    at processImmediate (internal/timers.js:416:9)
+2019-07-15T00:23:54.185Z - error: Error when processing OData PATCH: /odata/templates(rfltYKXDwlkHaCBF) Error: Entity (_id: rfltYKXDwlkHaCBF) was modified previously by another source
+    at module.exports (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-core\lib\reporter.js:288:12)
+    at AsyncFunction.col.beforeUpdateListeners.insert (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-studio\lib\studio.js:336:30)
+    at runNextTicks (internal/process/task_queues.js:52:5)
+    at processImmediate (internal/timers.js:416:9)
+2019-07-15T04:11:37.378Z - error: uncaughtException: kill ENOSYS date=Mon Jul 15 2019 00:11:37 GMT-0400 (GMT-04:00), pid=12604, uid=null, gid=null, cwd=C:\Users\Rafael mendez\Desktop\jsreportapp, execPath=C:\Program Files\nodejs\node.exe, version=v11.14.0, argv=[C:\Program Files\nodejs\node.exe, C:\Users\Rafael mendez\AppData\Roaming\npm\node_modules\jsreport-cli\cli.js, start], rss=24989696, heapTotal=59305984, heapUsed=46906932, external=759822, loadavg=[0, 0, 0], uptime=439091, trace=[column=13, file=internal/process/per_thread.js, function=process.kill, line=185, method=kill, native=false, column=15, file=C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\signal-exit\index.js, function=process.listener, line=95, method=listener, native=false, column=13, file=events.js, function=process.emit, line=193, method=emit, native=false], stack=[Error: kill ENOSYS,     at process.kill (internal/process/per_thread.js:185:13),     at process.listener (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\signal-exit\index.js:95:15),     at process.emit (events.js:193:13)]
+2019-07-16T12:34:00.276Z - error: Error when processing render request Timed out after 30000 ms while trying to connect to Chrome! The only Chrome revision guaranteed to work is r662092 TimeoutError: Timed out after 30000 ms while trying to connect to Chrome! The only Chrome revision guaranteed to work is r662092
+    at Timeout.onTimeout (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\puppeteer\lib\Launcher.js:353:14)
+    at listOnTimeout (internal/timers.js:535:17)
+    at processTimers (internal/timers.js:479:7)
+2019-07-16T12:34:00.470Z - error: Error during processing request at http://localhost:8001/api/report

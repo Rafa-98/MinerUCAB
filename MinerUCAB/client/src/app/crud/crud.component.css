@@ -1,0 +1,14 @@
+button {
+    all: unset;
+    color:black;    
+}
+
+button:hover{
+    color: rgb(233, 84, 32);
+    cursor: pointer;
+}
+
+.color{
+    all: unset;
+    color: white;
+}

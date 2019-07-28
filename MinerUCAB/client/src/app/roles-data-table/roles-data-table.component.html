@@ -1,0 +1,37 @@
+<app-header></app-header>
+<br>
+
+<div class="container">
+
+  <h1>Asociar Presentación a Mineral</h1>
+  
+<hr><br>
+
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+    <tr>        
+      <th>Id</th>
+      <th>Nombre</th> 
+      <th>Ver Privilegios</th>
+      <th>Edit / Delete</th>               
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rol of roles">
+      <td>{{rol.id}}</td>
+      <td>{{rol.nombre}}</td>    
+      <td><button (click)="seePrivilegios(rol)" class="links"><i class="fas fa-search px-4"></i></button></td>              
+      <td><a [routerLink]="['/rol/edit', rol.id]" ><i class="fas fa-edit"></i></a>  /  <button class="links" (click)="deleteRol(rol)"><i class="far fa-trash-alt"></i></button></td>               
+    </tr>               
+  </tbody>    
+</table>
+
+<button class="links" (click)="gotoAgregarRol()">
+  <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nuevo Rol</p>        
+</button>
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

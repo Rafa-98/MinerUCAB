@@ -1,0 +1,55 @@
+<app-header></app-header>
+<br>
+
+  <div class="container">
+
+    <h1>Privilegios del {{nombreRol}}</h1>
+    <hr><br>
+
+    <div *ngIf="vista != 'AddPri'">
+      <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+        <thead>
+          <tr>        
+            <th>Id</th>
+            <th>Nombre</th>           
+            <th>Select</th> 
+            <th>Delete</th>                             
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let privilegio of privilegios">
+            <td>{{privilegio.id}}</td>
+            <td>{{privilegio.nombre}}</td>                  
+            <td><button class="links" (click)="addPrivilegio(privilegio)"><i class="fas fa-plus-circle px-1"></i></button></td>               
+            <td><button class="links" (click)="deletePrivilegio(privilegio)"><i class="far fa-trash-alt"></i></button></td>               
+          </tr>               
+        </tbody>    
+      </table>
+    </div>
+
+    <table *ngIf="vista == 'AddPri'" class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Add</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let privilegio of nopriv">          
+              <td>{{privilegio.id}}</td>
+              <td>{{privilegio.nombre}}</td>
+              <td><button class="links" (click)="addPrivilegio(privilegio)"><i class="fas fa-plus-circle px-1"></i></button></td>               
+          </tr>                              
+        </tbody>
+      </table> 
+    
+    <button *ngIf="vista != 'AddPri'" class="links" (click)="gotoAgregarPrivilegio()">
+      <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Más Privilegios al Rol</p>        
+    </button>
+
+  </div>
+
+<br>
+
+<app-footer></app-footer>

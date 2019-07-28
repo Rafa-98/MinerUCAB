@@ -1,0 +1,9 @@
+.noStyle{
+    all: unset;
+    color:black;  
+}
+
+.noStyle:hover{
+    cursor:pointer;
+    background-color: blue;
+}

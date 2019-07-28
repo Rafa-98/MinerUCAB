@@ -1,0 +1,144 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-md-2">
+      <nav id="nave">
+        <h5>Contenido</h5>
+        <p>Metales</p>
+        <ul>
+            <li *ngFor="let metal of metales">
+                <button class="links" (click)="gotoMineralBuy(metal.nombre)">{{metal.nombre}}</button>
+            </li>                           
+        </ul>
+        <p>No Metales</p>
+        <ul>
+            <li *ngFor="let noMetal of noMetales">
+                <button class="links" (click)="gotoMineralBuy(noMetal.nombre)">{{noMetal.nombre}}</button> 
+            </li>              
+        </ul>
+      </nav>
+  </div>
+
+  <div data-spy="scroll" data-target="#nave" data-offset="0"></div>
+  <div class="col col-md-10">
+
+    <div class="container">
+        <div *ngIf="loading == true">
+            <h3>Cargando Información</h3>
+            <div class="spinner-border text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>   
+        </div>
+    </div>
+
+    <h4>Metales</h4>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4 d-flex" *ngFor="let metal of metales">
+            <div class="card flex-fill border-dark mb-3" id="item-1-1" style="max-width: 20rem;">
+                <div class="card-header">
+                    <h3>{{metal.nombre}}</h3>
+                    <h4>${{metal.costo}} / Kg</h4>
+                </div>
+                <div class="card-body">                                   
+                    <p class="card-text">{{metal.descripcion == null ? 'Sin descripción. Para conocer más sobre este mineral, por favor busque en internet o contáctenos a nuestros teléfonos' : metal.descripcion}}</p>
+                    <hr>                                        
+
+                    <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="buscarPre(metal)">
+                        Agregar al Carrito
+                    </button>
+                          
+                          <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Agregar Mineral</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                        <div class="form-group">                        
+                                            <select #valor class="form-control" id="exampleFormControlSelect1" style="margin-bottom: 5px">
+                                                <option>Seleccionar opción</option>
+                                                <option *ngFor="let presentacion of presentaciones">
+                                                    {{presentacion.id}}-{{presentacion.tipo}} de {{presentacion.cantidad}} Kg
+                                                </option>                            
+                                            </select>                    
+                                            <input #canti class="form-control form-control-md" type="text" placeholder="Cantidad de sacos o cajas" style="margin-bottom: 5px">                     
+                                            <button class="btn btn-block btn-primary" (click)="addCart(canti.value, metal, valor.value, presentacion); canti.value = ''" data-dismiss="modal">Agregar al carrito</button>                                                 
+                                        </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+
+                
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <br>
+    <h4>No Metales</h4>
+    <hr>
+
+     <div class="row">
+        <div class="col-md-4 d-flex" *ngFor="let noMetal of noMetales">
+            <div class="card flex-fill border-dark mb-3" id="item-1-1" style="max-width: 20rem;">
+                <div class="card-header">
+                    <h3>{{noMetal.nombre}}</h3>
+                    <h4>${{noMetal.costo}} / Kg</h4>
+                </div>
+                <div class="card-body">                                   
+                    <p class="card-text">{{noMetal.descripcion == null ? 'Sin descripción. Para conocer más sobre este mineral, por favor busque en internet o contáctenos a nuestros teléfonos' : noMetal.descripcion}}</p>
+                    <hr>                                    
+                    <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="buscarPre(noMetal)">
+                        Comprar
+                    </button>  
+                    
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Agregar Mineral</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                                <div class="form-group">                        
+                                                    <select #valor class="form-control" id="exampleFormControlSelect1" style="margin-bottom: 5px">
+                                                        <option>Seleccionar opción</option>
+                                                        <option *ngFor="let presentacion of presentaciones">
+                                                            {{presentacion.id}}-{{presentacion.tipo}} de {{presentacion.cantidad}} Kg
+                                                        </option>                            
+                                                    </select>                    
+                                                    <input #canti class="form-control form-control-md" type="text" placeholder="Cantidad de sacos o cajas" style="margin-bottom: 5px">                     
+                                                    <button class="btn btn-block btn-primary" (click)="addCart(canti.value, metal, valor.value, presentacion); canti.value = ''" data-dismiss="modal">Agregar al carrito</button>                                                 
+                                                </div>
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+            </div>    
+        </div>
+     </div>    
+
+  </div>
+
+  </div>
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

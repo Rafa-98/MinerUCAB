@@ -1,0 +1,47 @@
+<!--body {
+    background: url('https://img.freepik.com/free-vector/elegant-white-background-with-shiny-lines_1017-17580.jpg?size=626&ext=jpg');
+}-->
+
+<div [ngStyle]="{background: 'url(./../../assets/backgrounds/background.jpg)'}">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <img src="../../assets/logos/Logo1-3.png"/>
+          </div>
+          <div class="col-md-2 offset-6 py-5">                
+              <a routerLink="/cart" routerLinkActive="active"><i class="fas fa-shopping-cart" style="font-size:30px"></i> ${{cart.monto}}</a>
+          </div>
+      </div>
+  </div>
+  
+  <div class="container text-center">
+      <h1 style="font-style: italic; font-family: Trebuchet MS">Corporación Nacional de Desarrollo Mineral</h1><br>
+  </div>
+
+</div>
+
+  <div class="container-flow separacion">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <span class="navbar-brand">{{ title }}</span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/inicio" routerLinkActive="active">Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/yacimientos/list" routerLinkActive="active">Yacimientos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/aliados/list" routerLinkActive="active">Nuestro Aliados</a>
+              </li>
+              <li class="nav-item">
+                <button style="margin-top: 5px; margin-left: 3px" class="logOut" (click)="exLogout()"><i class="fas fa-user"></i> Logout</button>
+              </li>
+           </ul>         
+        </div>
+      </nav>
+  </div>

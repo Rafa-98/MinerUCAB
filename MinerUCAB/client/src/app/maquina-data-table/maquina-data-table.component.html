@@ -1,0 +1,40 @@
+<app-header></app-header>
+<br>
+
+<div class="container">
+    <div *ngIf="loading == true" class="div">
+      <h3>Cargando Información</h3>
+      <div class="spinner-border text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>   
+    </div>
+</div>
+
+<div class="container">
+
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Costo</th>
+        <th>Modificar/Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let maquina of maquinas">
+        <td>{{ maquina.id }}</td>
+        <td>{{ maquina.nombre }}</td>
+        <td>{{ maquina.costo }}</td>
+        <td *ngIf="vista == ''"><a [routerLink]="['/maquina/edit', maquina.id]" ><i class="fas fa-edit"></i></a>  /  <button class="links" (click)="deleteMaquina(maquina)"><i class="far fa-trash-alt"></i></button></td>        
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="container">
+      <button class="links" (click)="gotoAgregarMaquina()">
+          <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nueva Máquina</p>        
+        </button>
+  </div>
+
+</div>

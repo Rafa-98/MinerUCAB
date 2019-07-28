@@ -1,0 +1,97 @@
+<app-header></app-header>
+
+<br>
+
+  <div class="container">
+      <h1>{{caso}} Cliente</h1>
+
+      <hr><br>
+
+      <div class="row">
+          
+        <div class="col-sm-12 col-md-6 col-bg-4">
+            <label>Nombre del Cliente:</label>
+            <input class="form-control form-control-md" type="text" name="nombre" [(ngModel)]="cliente[0].nombre" placeholder="Nombre">
+            <br>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-bg-4">
+            <label>Apellido del Cliente:</label>
+            <input class="form-control form-control-md" type="text" name="apellido" [(ngModel)]="cliente[0].apellido" placeholder="Apellido">
+            <br>
+        </div>        
+
+      </div>
+
+      <div class="row">
+          <div class="col-sm-12 col-md-6 col-bg-4">
+              <label>Telefono:</label>
+              <input class="form-control form-control-md" type="text" name="apellido" [(ngModel)]="cliente[0].telefono" placeholder="Telefono">
+              <br>
+          </div>
+      </div>
+
+      <!------------------------------------------DIRECCION---------------------------->
+
+      <h3>Dirección del Cliente</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Estado</label>
+            <select class="form-control" name="estado" [(ngModel)]="estado[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let estado of estados" style="color:black">
+                <div>{{estado.l_clave}}-{{estado.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="margin-top: 6px" (click)="buscarMunicipios()">
+            Desplegar Municipios
+          </button>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Municipio</label>
+            <select class="form-control" name="municipio" [(ngModel)]="municipio[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let municipio of municipios">
+                <div>{{municipio.l_clave}}-{{municipio.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="margin-top: 6px" (click)="buscarParroquias()">
+            Desplegar Parroquias
+          </button>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Parroquia</label>
+            <select class="form-control" name="parroquia" [(ngModel)]="parroquia[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let parroquia of parroquias">
+                <div>{{parroquia.l_clave}}-{{parroquia.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+        </div>        
+      </div>
+      <br><br>
+
+      <!---------------------------------------------------------------------------------->
+
+      <div *ngIf="caso == 'Modificar'">
+        <button type="button" class="btn btn-primary" (click)="modificarCliente()">Modificar</button>
+      </div>
+
+      <div *ngIf="caso == 'Agregar'">
+        <button type="button" class="btn btn-primary" (click)="agregarCliente()">Agregar</button>
+      </div>
+
+      
+  </div>
+
+<br>
+
+<app-footer></app-footer>

@@ -1,0 +1,266 @@
+<app-header></app-header>
+
+<br>
+
+<div *ngIf="vista == 'Proyecto'" class="container">
+
+  <h2>Etapa #{{numeroEtapa}}</h2>
+  <hr>
+  <br>
+
+  <div class="row">
+
+      <div class="col-sm-12 col-md-6 col-bg-4">
+          <label>Nombre de la Etapa:</label>
+          <input class="form-control form-control-md" type="text" name="nombre" [(ngModel)]="etapa" placeholder="Etapa">
+          <br>
+      </div>
+
+  </div>
+
+  <div class="row">
+    <button class="btn btn-primary" (click)="cambiarAFase()">Agregar Fase</button>
+  </div>
+
+</div>
+
+<div *ngIf="vista == 'Fase'" class="container">
+
+  <h2>Agregar Fase #{{numeroFase}}</h2>
+
+  <div class="row">
+
+      <div class="col-sm-12 col-md-6 col-bg-4">
+          <label>Nombre de la Fase:</label>
+          <input class="form-control form-control-md" type="text" name="nombre" [(ngModel)]="fase" placeholder="Fase">
+          <br>
+      </div>
+
+  </div>
+
+
+  <label>Fecha de Inicio:</label>
+  <div class="row">
+
+      <div class="col-md-2">
+          <div class="form-group">
+            <label for="exampleSelect1">Día</label>
+            <select class="form-control" id="exampleSelect1" name="dia" [(ngModel)]="dia">
+              <option>Seleccione una opción</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>                    
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="form-group">
+              <label for="exampleSelect1">Mes</label>
+              <select class="form-control" id="exampleSelect1" name="mes" [(ngModel)]="mes">
+                <option>Seleccione una opción</option>
+                <option>01-Enero</option>
+                <option>02-Febrero</option>
+                <option>03-Marzo</option>
+                <option>04-Abril</option>
+                <option>05-Mayo</option>
+                <option>06-Junio</option>
+                <option>07-Julio</option>
+                <option>08-Agosto</option>
+                <option>09-Septiembre</option>
+                <option>10-Octubre</option>
+                <option>11-Noviembre</option>
+                <option>12-Diciembre</option>                                                   
+              </select>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <label>Año</label>
+            <input class="form-control form-control-md" type="text" name="year" [(ngModel)]="year" placeholder="Año">
+            <br>
+        </div>
+
+  </div>
+
+  <label>Fecha de Fin (Estimada):</label>
+  <div class="row">
+
+      <div class="col-md-2">
+          <div class="form-group">
+            <label for="exampleSelect1">Día</label>
+            <select class="form-control" id="exampleSelect1" name="dia" [(ngModel)]="diaf">
+              <option>Seleccione una opción</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>                    
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="form-group">
+              <label for="exampleSelect1">Mes</label>
+              <select class="form-control" id="exampleSelect1" name="mes" [(ngModel)]="mesf">
+                <option>Seleccione una opción</option>
+                <option>01-Enero</option>
+                <option>02-Febrero</option>
+                <option>03-Marzo</option>
+                <option>04-Abril</option>
+                <option>05-Mayo</option>
+                <option>06-Junio</option>
+                <option>07-Julio</option>
+                <option>08-Agosto</option>
+                <option>09-Septiembre</option>
+                <option>10-Octubre</option>
+                <option>11-Noviembre</option>
+                <option>12-Diciembre</option>                                                   
+              </select>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <label>Año</label>
+            <input class="form-control form-control-md" type="text" name="year" [(ngModel)]="yearf" placeholder="Año">
+            <br>
+        </div>
+
+  </div>
+  
+  <div class="form-group">
+      <label for="exampleFormControlSelect1">Configuración de la Fase</label>
+      <select class="form-control" id="exampleFormControlSelect1" name="Conf" [(ngModel)]="configuracion">
+        <option>Seleccionar una opción</option>
+        <option *ngFor="let configuracion of configuraciones">
+          {{configuracion.clave}}-{{configuracion.nombre}} de: {{configuracion.duracion}} días
+        </option>        
+      </select>
+  </div>
+
+  <button class="btn btn-primary" (click)="AlmacenarFaseIrMaquina()">Siguiente</button>
+
+</div>
+
+<div *ngIf="vista == 'Maquina'" class="container">
+
+    <div *ngIf="vista == 'Maquina'">
+      <h2>Agregar Máquinas a Fase #{{numeroFase}}</h2>
+
+      <p>{{nombreMaquinaNecesaria}} necesarias: {{cantidadMaquinas}}</p>
+      <p>{{nombreMaquinaNecesaria}} agregadas: {{cantidadMaquinasAgregadas}}</p>
+    </div>    
+
+    <!----<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+        <thead>
+            <tr>                
+              <th>ID</th>
+              <th>Tipo de Máquina</th> 
+              <th>Select</th>                           
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let maquina of maquinas">            
+              <td>{{maquina.id}}</td>
+              <td>{{maquina.tipo_maquina}}</td>                                            
+              <td><button class="links" (click)="agregarMaquina(maquina)"><i class="fas fa-plus-circle"></i></button></td>
+            </tr>               
+        </tbody>        
+    </table> -->
+
+    <table class="table table-hover">
+        <thead>
+            <tr>                
+              <th>ID</th>
+              <th>Tipo de Máquina</th> 
+              <th>Select</th>                           
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let maquina of maquinas">            
+              <td>{{maquina.id}}</td>
+              <td>{{maquina.tipo_maquina}}</td>                                            
+              <td><button class="links" (click)="agregarMaquina(maquina)"><i class="fas fa-plus-circle"></i></button></td>
+            </tr>               
+        </tbody>        
+    </table>
+
+      <br>
+
+      <!----<button class="btn btn-primary" (click)="irEmpleados()">Siguiente</button>-->
+
+</div> 
+
+<div *ngIf="vista == 'decide'" class="container">
+
+  <h1>Creación de proyecto</h1>
+  <hr><br>
+
+  <button class="btn btn-primary" (click)="NuevaFase()">Agregar nueva Fase a la Etapa {{numeroEtapa}}.</button>
+  <br>
+  <button class="btn btn-primary" (click)="NuevaEtapa()" style="margin-top: 10px">Agregar nueva Etapa al Proyecto.</button>
+  <br>
+  <button class="btn btn-primary" (click)="Terminar()" style="margin-top: 10px">Terminar creación de Proyecto.</button>
+
+
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

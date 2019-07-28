@@ -1,0 +1,81 @@
+<app-header></app-header>
+<br>
+
+<div class="container">
+  <h1>Vista Previa de Facturación</h1>
+  <hr>
+  <div class="col-md-12 col-sm-12">  
+    <div class="container">
+      <div class="row justify-content-center text-center" style="background-color:darkgray">
+        <p>SENIAT<br>RIF N°. J-30926957-7<br>TechFirst & Associated<br>Av. Fco Lazo Marti Edif. Mayoral plaza<br>Telf: 0212-4074407</p>
+      </div>
+      <div class="row justify-content-around text-center">
+        <div class="col-3">
+          <p>Aliado</p>
+          <p *ngFor="let pedido of pedidos">
+            {{pedido.aliado}}
+          </p>
+        </div>
+        <div class="col-3">
+          <p>Producto</p>
+          <p *ngFor="let pedido of pedidos">
+            {{pedido.producto}}
+          </p>
+          <!----<p>Carbon</p>
+          <p>Oro</p>-->
+          <hr/>          
+        </div>
+        <!----<div class="col-2">
+          <p>Presentación</p>
+          <p *ngFor="let pedido of pedidos">
+            {{pedido.presentacion}}
+          </p>
+          --<p>5</p>
+          <p>2.4</p> -->
+          <!----<hr>
+        </div> -->
+        <div class="col-3">
+          <p>Cantidad</p>
+          <p *ngFor="let pedido of pedidos">
+            {{pedido.cantidad}}
+          </p>
+          <!----<p>$1000</p>
+          <p>$30000</p> -->
+          <hr>
+          <!----<p>Total</p>-->
+        </div>
+        <div class="col-3">
+          <p>Eliminar</p>
+          <p *ngFor="let pedido of pedidos"><button class="links"><i class="far fa-trash-alt"></i></button></p>
+        </div>
+       <!---- <div class="col-2">
+          <p>Costo</p>
+          <p *ngFor="let pedido of pedidos">
+            ${{pedido.precio}}
+          </p> -->
+          <!----<p>$2342</p>
+          <p>$3440</p> -->
+         <!---- <hr>
+          <p>${{precioTotal}}</p>
+        </div> -->
+      </div>
+      <div class="row justify-content-center text-center" style="background-color:darkgray">
+        <p><br>FACTURA<br>N°: 7298<br></p>
+      </div>
+    </div>
+  </div>
+
+  <br><hr>
+
+  <div class="row">
+    <button class="btn btn-primary" (click)="comprar()">Efectuar Compra</button>
+    <button class="btn btn-primary" style="margin-left: 5px" (click)="gotoMinerales()">Agregar más productos</button>
+  </div>
+
+  
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

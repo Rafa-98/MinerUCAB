@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<br>
+
+  <div class="container">
+
+      <h1>{{caso}} Máquina</h1>
+
+      <hr><br>
+
+      <div class="row">
+
+          <div class="col-md-6">
+            <label>Tipo de Máquina</label>
+            <select #valor class="form-control" id="exampleFormControlSelect1" style="margin-bottom: 5px">
+                <option>Seleccionar opción</option>
+                <option *ngFor="let tipoMaquina of tiposMaquina">
+                    {{tipoMaquina.id}}-{{tipoMaquina.nombre}}
+                </option>                            
+            </select>
+          </div>                                      
+  
+      </div>
+
+      <br>
+
+      <div class="row">
+
+        <div class="col-sm-12 col-md-6 col-bg-4">
+          <label>Costo de la Máquina:</label>
+          <input class="form-control form-control-md" type="text" name="costo" [(ngModel)]="maquina[0].costo" placeholder="Costo">
+          <br>
+        </div>
+        
+      </div>
+
+        <button type="button" class="btn btn-primary" (click)="agregarMaquina(valor.value)">{{caso}}</button>
+
+  </div>
+
+<br>
+
+<app-footer></app-footer>

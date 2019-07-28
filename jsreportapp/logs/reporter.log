@@ -1,0 +1,721 @@
+2019-07-07T20:21:24.268Z - info: Initializing jsreport@2.5.0 in development mode using configuration file: jsreport.config.json
+2019-07-07T20:21:24.275Z - info: Searching for available extensions in C:\Users\Rafael mendez\Desktop\jsreportapp\
+2019-07-07T20:21:24.308Z - info: Extensions location cache not found, crawling directories
+2019-07-07T20:21:42.911Z - info: Found 31 extensions
+2019-07-07T20:21:43.296Z - info: Setting http-server strategy for rendering
+2019-07-07T20:21:44.234Z - info: Using extension cli@2.0.7
+2019-07-07T20:21:44.269Z - info: Using extension debug@2.0.2
+2019-07-07T20:21:44.303Z - info: Using extension express@2.4.0
+2019-07-07T20:21:47.125Z - info: Using extension freeze@2.0.0
+2019-07-07T20:21:47.185Z - info: Using extension handlebars@2.0.2
+2019-07-07T20:21:47.294Z - info: Using extension import-export@1.3.0
+2019-07-07T20:21:49.916Z - info: Using extension jsrender@2.0.0
+2019-07-07T20:21:49.926Z - info: Using extension tags@2.2.0
+2019-07-07T20:21:49.959Z - info: Using extension templates@2.2.0
+2019-07-07T20:21:49.982Z - info: Using extension authorization@2.2.4
+2019-07-07T20:21:50.053Z - info: Using extension base@2.0.2
+2019-07-07T20:21:50.066Z - info: Using extension browser-client@2.1.1
+2019-07-07T20:21:50.104Z - info: Using extension child-templates@1.2.0
+2019-07-07T20:21:50.160Z - info: Using extension chrome-pdf@1.4.0
+2019-07-07T20:21:51.771Z - info: Using extension data@2.1.0
+2019-07-07T20:21:51.788Z - info: Using extension fs-store@2.4.1
+2019-07-07T20:21:56.769Z - info: Using extension licensing@2.1.0
+2019-07-07T20:21:57.855Z - info: Using extension pdf-utils@1.4.0
+2019-07-07T20:22:02.124Z - info: Using extension reports@2.2.0
+2019-07-07T20:22:02.206Z - info: Using extension studio@2.5.1
+2019-07-07T20:22:02.873Z - info: Using extension text@2.0.0
+2019-07-07T20:22:02.879Z - info: Using extension version-control@1.2.3
+2019-07-07T20:22:05.568Z - info: Using extension assets@1.1.3
+2019-07-07T20:22:05.689Z - info: Using extension html-to-xlsx@2.3.1
+2019-07-07T20:22:07.418Z - info: html-to-xlsx detected chrome as available html engine
+2019-07-07T20:22:07.420Z - info: Using extension scheduling@2.0.7
+2019-07-07T20:22:07.862Z - info: Using extension scripts@2.1.0
+2019-07-07T20:22:07.939Z - info: Using extension xlsx@2.0.10
+2019-07-07T20:22:10.007Z - info: Using extension public-templates@2.0.1
+2019-07-07T20:22:10.043Z - info: Using extension resources@2.0.3
+2019-07-07T20:22:10.061Z - info: Using extension sample-template@2.3.0
+2019-07-07T20:22:10.084Z - info: Using fs provider for template store.
+2019-07-07T20:22:10.096Z - info: fs store is persisting using fs
+2019-07-07T20:22:10.099Z - info: fs store is synchronizing using fs
+2019-07-07T20:22:10.171Z - info: fs store is loading data
+2019-07-07T20:22:10.372Z - info: fs store is initialized successfully
+2019-07-07T20:22:10.445Z - info: Creating default express app.
+2019-07-07T20:22:10.960Z - info: jsreport server successfully started on http port: 8001
+2019-07-07T20:22:10.962Z - info: fs store emits sockets to synchronize underlying changes with studio
+2019-07-07T20:22:11.385Z - info: Verifying license key free
+2019-07-07T20:22:11.395Z - info: Using free license
+2019-07-07T20:22:13.398Z - info: reporter initialized
+2019-07-07T20:24:14.822Z - info: Starting rendering request 1 (user: null)
+2019-07-07T20:24:14.830Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-07T20:25:08.014Z - info: pdf-utils is starting pdf processing
+2019-07-07T20:25:11.354Z - info: Starting rendering request 2 (user: null)
+2019-07-07T20:25:11.357Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-07T20:25:16.424Z - info: Rendering request 2 finished in 5071 ms
+2019-07-07T20:25:16.456Z - info: Starting rendering request 3 (user: null)
+2019-07-07T20:25:16.474Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-07T20:25:18.115Z - warn: Error when processing render request Timeout during evaluation of pdf-utils operations Error: Timeout during evaluation of pdf-utils operations
+    at Timeout._onTimeout (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\script-manager\lib\manager-servers.js:154:23)
+    at listOnTimeout (internal/timers.js:535:17)
+    at processTimers (internal/timers.js:479:7)
+2019-07-07T20:25:18.246Z - warn: Error during processing request at http://localhost:8001/api/report/orders-main
+2019-07-07T20:25:21.366Z - info: Rendering request 3 finished in 4910 ms
+2019-07-07T20:25:33.503Z - info: Starting rendering request 4 (user: null)
+2019-07-07T20:25:33.569Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-07T20:25:38.839Z - info: Rendering request 4 finished in 5365 ms
+2019-07-14T20:15:34.050Z - info: Initializing jsreport@2.5.0 in development mode using configuration file: jsreport.config.json
+2019-07-14T20:15:34.080Z - info: Searching for available extensions in C:\Users\Rafael mendez\Desktop\jsreportapp\
+2019-07-14T20:15:34.512Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Rafael mendez\Desktop\jsreportapp\
+2019-07-14T20:15:34.585Z - info: Found 31 extensions
+2019-07-14T20:15:35.224Z - info: Setting http-server strategy for rendering
+2019-07-14T20:15:36.421Z - info: Using extension cli@2.0.7
+2019-07-14T20:15:36.465Z - info: Using extension debug@2.0.2
+2019-07-14T20:15:36.532Z - info: Using extension express@2.4.0
+2019-07-14T20:15:41.747Z - info: Using extension freeze@2.0.0
+2019-07-14T20:15:41.794Z - info: Using extension handlebars@2.0.2
+2019-07-14T20:15:41.965Z - info: Using extension import-export@1.3.0
+2019-07-14T20:15:47.003Z - info: Using extension jsrender@2.0.0
+2019-07-14T20:15:47.028Z - info: Using extension tags@2.2.0
+2019-07-14T20:15:47.070Z - info: Using extension templates@2.2.0
+2019-07-14T20:15:47.141Z - info: Using extension authorization@2.2.4
+2019-07-14T20:15:47.252Z - info: Using extension base@2.0.2
+2019-07-14T20:15:47.296Z - info: Using extension browser-client@2.1.1
+2019-07-14T20:15:47.369Z - info: Using extension child-templates@1.2.0
+2019-07-14T20:15:47.457Z - info: Using extension chrome-pdf@1.4.0
+2019-07-14T20:15:50.477Z - info: Using extension data@2.1.0
+2019-07-14T20:15:50.497Z - info: Using extension fs-store@2.4.1
+2019-07-14T20:16:00.380Z - info: Using extension licensing@2.1.0
+2019-07-14T20:16:01.351Z - info: Using extension pdf-utils@1.4.0
+2019-07-14T20:16:04.815Z - info: Using extension reports@2.2.0
+2019-07-14T20:16:04.924Z - info: Using extension studio@2.5.1
+2019-07-14T20:16:05.394Z - info: Using extension text@2.0.0
+2019-07-14T20:16:05.418Z - info: Using extension version-control@1.2.3
+2019-07-14T20:16:07.742Z - info: Using extension assets@1.1.3
+2019-07-14T20:16:07.970Z - info: Using extension html-to-xlsx@2.3.1
+2019-07-14T20:16:11.006Z - info: html-to-xlsx detected chrome as available html engine
+2019-07-14T20:16:11.010Z - info: Using extension scheduling@2.0.7
+2019-07-14T20:16:11.707Z - info: Using extension scripts@2.1.0
+2019-07-14T20:16:11.787Z - info: Using extension xlsx@2.0.10
+2019-07-14T20:16:16.060Z - info: Using extension public-templates@2.0.1
+2019-07-14T20:16:16.117Z - info: Using extension resources@2.0.3
+2019-07-14T20:16:16.137Z - info: Using extension sample-template@2.3.0
+2019-07-14T20:16:16.184Z - info: Using fs provider for template store.
+2019-07-14T20:16:16.200Z - info: fs store is persisting using fs
+2019-07-14T20:16:16.203Z - info: fs store is synchronizing using fs
+2019-07-14T20:16:16.302Z - info: fs store is loading data
+2019-07-14T20:16:17.658Z - info: fs store is initialized successfully
+2019-07-14T20:16:17.836Z - info: Creating default express app.
+2019-07-14T20:16:18.889Z - info: jsreport server successfully started on http port: 8001
+2019-07-14T20:16:18.970Z - info: fs store is loading data
+2019-07-14T20:16:18.975Z - info: fs store emits sockets to synchronize underlying changes with studio
+2019-07-14T20:16:19.620Z - info: Verifying license key free
+2019-07-14T20:16:19.633Z - info: Using free license
+2019-07-14T20:16:19.759Z - info: reporter initialized
+2019-07-14T20:34:33.112Z - info: fs store is loading data
+2019-07-14T20:34:44.638Z - info: fs store is loading data
+2019-07-14T20:34:51.871Z - info: fs store is loading data
+2019-07-14T20:35:00.357Z - info: fs store is loading data
+2019-07-14T20:35:53.622Z - info: Starting rendering request 1 (user: null)
+2019-07-14T20:35:53.657Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:36:40.171Z - info: Rendering request 1 finished in 46620 ms
+2019-07-14T20:38:39.129Z - info: Starting rendering request 2 (user: null)
+2019-07-14T20:38:39.134Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:38:49.961Z - info: Rendering request 2 finished in 10869 ms
+2019-07-14T20:39:58.626Z - info: Starting rendering request 3 (user: null)
+2019-07-14T20:39:58.696Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:39:59.078Z - warn: Error when processing render request Error while executing templating engine. Parse error on line 91:
+... <br> Created: {{now}}}               
+-----------------------^
+Expecting 'CLOSE', 'OPEN_SEXPR', 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE_UNESCAPED' Error: Parse error on line 91:
+... <br> Created: {{now}}}               
+-----------------------^
+Expecting 'CLOSE', 'OPEN_SEXPR', 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE_UNESCAPED'
+    at Parser.parseError (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:267:19)
+    at Parser.parse (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:336:30)
+    at HandlebarsEnvironment.parse (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:46:43)
+    at compileInput (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:515:19)
+    at ret (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:524:18)
+    at C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-handlebars\lib\handlebarsEngine.js:25:14
+    at Object.apply (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\vm2\lib/contextify.js:288:34)
+    at evaluate-template-engine.js:1:41
+    at Script.runInContext (vm.js:135:20)
+    at VM.run (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\vm2\lib\main.js:212:72)
+2019-07-14T20:39:59.084Z - warn: Error during processing request at http://localhost:8001/api/report/invoice-main
+2019-07-14T20:40:28.219Z - info: Starting rendering request 4 (user: null)
+2019-07-14T20:40:28.227Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:40:28.376Z - warn: Error when processing render request Error while executing templating engine. Parse error on line 92:
+... <br> Created: {{now}}}               
+-----------------------^
+Expecting 'CLOSE', 'OPEN_SEXPR', 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE_UNESCAPED' Error: Parse error on line 92:
+... <br> Created: {{now}}}               
+-----------------------^
+Expecting 'CLOSE', 'OPEN_SEXPR', 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'CLOSE_UNESCAPED'
+    at Parser.parseError (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:267:19)
+    at Parser.parse (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:336:30)
+    at HandlebarsEnvironment.parse (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:46:43)
+    at compileInput (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:515:19)
+    at ret (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:524:18)
+    at C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-handlebars\lib\handlebarsEngine.js:25:14
+    at Object.apply (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\vm2\lib/contextify.js:288:34)
+    at evaluate-template-engine.js:1:41
+    at Script.runInContext (vm.js:135:20)
+    at VM.run (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\vm2\lib\main.js:212:72)
+2019-07-14T20:40:28.378Z - warn: Error during processing request at http://localhost:8001/api/report/invoice-main
+2019-07-14T20:40:41.409Z - info: Starting rendering request 5 (user: null)
+2019-07-14T20:40:41.411Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:40:46.156Z - info: Rendering request 5 finished in 4748 ms
+2019-07-14T20:41:06.938Z - info: Starting rendering request 6 (user: null)
+2019-07-14T20:41:06.941Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:41:12.063Z - info: Rendering request 6 finished in 5123 ms
+2019-07-14T20:41:22.935Z - info: Starting rendering request 7 (user: null)
+2019-07-14T20:41:22.962Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:41:30.242Z - info: Rendering request 7 finished in 7354 ms
+2019-07-14T20:41:43.699Z - info: Starting rendering request 8 (user: null)
+2019-07-14T20:41:43.702Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:41:49.878Z - info: Rendering request 8 finished in 6199 ms
+2019-07-14T20:50:26.883Z - info: Starting rendering request 9 (user: null)
+2019-07-14T20:50:26.908Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:51:13.635Z - info: Rendering request 9 finished in 46803 ms
+2019-07-14T20:51:44.055Z - info: Starting rendering request 10 (user: null)
+2019-07-14T20:51:44.234Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:51:52.214Z - info: Rendering request 10 finished in 8390 ms
+2019-07-14T20:53:20.648Z - info: Starting rendering request 11 (user: null)
+2019-07-14T20:53:20.727Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:53:26.820Z - info: Rendering request 11 finished in 6187 ms
+2019-07-14T20:54:01.249Z - info: Starting rendering request 12 (user: null)
+2019-07-14T20:54:01.252Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:54:02.580Z - warn: Error when processing render request Error while executing templating engine. items.forEach is not a function. Error on line 34:11.
+
+  32 | function total(items) {
+  33 |     var sum = 0
+> 34 |     items.forEach(function (i) {
+     |           ^
+  35 |         console.log('Calculating item ' + i.name + '; you should see this message in debug run')
+  36 |         sum += i.price
+  37 |     })
+
+ TypeError: items.forEach is not a function
+    at Object.total (evaluate-template-engine-helpers.js:34:11)
+    at eval (eval at createFunctionContext (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:257:23), <anonymous>:10:156)
+    at prog (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\runtime.js:221:12)
+    at execIteration (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:51:19)
+    at Object.<anonymous> (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:61:13)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:257:23), <anonymous>:8:31)
+    at main (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\runtime.js:175:32)
+    at ret (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\runtime.js:178:12)
+    at ret (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:526:21)
+    at C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-handlebars\lib\handlebarsEngine.js:25:14
+2019-07-14T20:54:02.582Z - warn: Error during processing request at http://localhost:8001/api/report/invoice-main
+2019-07-14T20:54:20.237Z - info: Starting rendering request 13 (user: null)
+2019-07-14T20:54:20.242Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:54:25.536Z - info: Rendering request 13 finished in 5397 ms
+2019-07-14T20:57:55.641Z - info: Starting rendering request 14 (user: null)
+2019-07-14T20:57:55.644Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T20:58:04.111Z - info: Rendering request 14 finished in 8469 ms
+2019-07-14T21:00:21.241Z - info: Starting rendering request 15 (user: null)
+2019-07-14T21:00:21.244Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:00:26.812Z - info: Rendering request 15 finished in 5571 ms
+2019-07-14T21:01:37.168Z - info: Starting rendering request 16 (user: null)
+2019-07-14T21:01:37.173Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:01:41.833Z - info: Rendering request 16 finished in 4691 ms
+2019-07-14T21:02:04.499Z - info: Starting rendering request 17 (user: null)
+2019-07-14T21:02:04.501Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:02:10.316Z - info: Rendering request 17 finished in 5831 ms
+2019-07-14T21:02:29.533Z - info: Starting rendering request 18 (user: null)
+2019-07-14T21:02:29.544Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:02:34.130Z - info: Rendering request 18 finished in 4640 ms
+2019-07-14T21:03:00.188Z - info: Starting rendering request 19 (user: null)
+2019-07-14T21:03:00.190Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:03:06.330Z - info: Rendering request 19 finished in 6145 ms
+2019-07-14T21:03:53.088Z - info: Starting rendering request 20 (user: null)
+2019-07-14T21:03:53.090Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:03:57.647Z - info: Rendering request 20 finished in 4575 ms
+2019-07-14T21:06:45.459Z - info: Starting rendering request 21 (user: null)
+2019-07-14T21:06:45.461Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:06:50.985Z - info: Rendering request 21 finished in 5525 ms
+2019-07-14T21:11:14.591Z - info: Starting rendering request 22 (user: null)
+2019-07-14T21:11:14.611Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:11:21.201Z - info: Rendering request 22 finished in 6664 ms
+2019-07-14T21:11:30.815Z - info: Starting rendering request 23 (user: null)
+2019-07-14T21:11:30.836Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:11:36.988Z - info: Rendering request 23 finished in 6184 ms
+2019-07-14T21:11:54.912Z - info: Starting rendering request 24 (user: null)
+2019-07-14T21:11:54.920Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:12:00.597Z - info: Rendering request 24 finished in 5743 ms
+2019-07-14T21:14:11.674Z - info: Starting rendering request 25 (user: null)
+2019-07-14T21:14:11.677Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:14:18.199Z - info: Rendering request 25 finished in 6525 ms
+2019-07-14T21:25:23.886Z - info: Starting rendering request 26 (user: null)
+2019-07-14T21:25:23.907Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:26:03.787Z - info: Rendering request 26 finished in 40031 ms
+2019-07-14T21:27:08.843Z - info: Starting rendering request 27 (user: null)
+2019-07-14T21:27:08.850Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:27:14.811Z - info: Rendering request 27 finished in 5967 ms
+2019-07-14T21:39:41.721Z - info: Starting rendering request 28 (user: null)
+2019-07-14T21:39:41.724Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:39:52.703Z - info: Rendering request 28 finished in 10982 ms
+2019-07-14T21:40:03.274Z - info: Starting rendering request 29 (user: null)
+2019-07-14T21:40:03.276Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:40:07.567Z - info: Rendering request 29 finished in 4293 ms
+2019-07-14T21:40:17.624Z - info: Starting rendering request 30 (user: null)
+2019-07-14T21:40:17.626Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:40:22.185Z - info: Rendering request 30 finished in 4562 ms
+2019-07-14T21:41:04.816Z - info: Starting rendering request 31 (user: null)
+2019-07-14T21:41:04.822Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:41:09.834Z - info: Rendering request 31 finished in 5020 ms
+2019-07-14T21:44:23.686Z - info: Starting rendering request 32 (user: null)
+2019-07-14T21:44:23.688Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:44:31.673Z - info: Rendering request 32 finished in 7988 ms
+2019-07-14T21:45:14.414Z - info: Starting rendering request 33 (user: null)
+2019-07-14T21:45:14.422Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:45:20.403Z - info: Rendering request 33 finished in 6032 ms
+2019-07-14T21:46:13.271Z - info: Starting rendering request 34 (user: null)
+2019-07-14T21:46:13.273Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T21:46:18.927Z - info: Rendering request 34 finished in 5656 ms
+2019-07-14T21:59:52.600Z - info: Starting rendering request 35 (user: null)
+2019-07-14T21:59:52.603Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:00:24.394Z - info: Rendering request 35 finished in 31794 ms
+2019-07-14T22:03:42.280Z - info: Starting rendering request 36 (user: null)
+2019-07-14T22:03:42.283Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:03:43.820Z - info: Starting rendering request 37 (user: null)
+2019-07-14T22:03:43.829Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:04:04.206Z - info: Rendering request 37 finished in 20449 ms
+2019-07-14T22:04:04.989Z - info: Rendering request 36 finished in 22679 ms
+2019-07-14T22:05:05.966Z - info: Starting rendering request 38 (user: null)
+2019-07-14T22:05:05.976Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:05:10.812Z - info: Rendering request 38 finished in 4846 ms
+2019-07-14T22:08:14.984Z - info: Starting rendering request 39 (user: null)
+2019-07-14T22:08:15.016Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:08:20.611Z - info: Rendering request 39 finished in 5636 ms
+2019-07-14T22:10:13.321Z - info: Starting rendering request 40 (user: null)
+2019-07-14T22:10:13.324Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:10:14.121Z - warn: Error when processing render request Error while executing templating engine. Parse error on line 97:
+...            <h3>{{rep[0].nombre}} {{re
+----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' Error: Parse error on line 97:
+...            <h3>{{rep[0].nombre}} {{re
+----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID'
+    at Parser.parseError (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:267:19)
+    at Parser.parse (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:336:30)
+    at HandlebarsEnvironment.parse (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:46:43)
+    at compileInput (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:515:19)
+    at ret (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:524:18)
+    at C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-handlebars\lib\handlebarsEngine.js:25:14
+    at Object.apply (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\vm2\lib/contextify.js:288:34)
+    at evaluate-template-engine.js:1:41
+    at Script.runInContext (vm.js:135:20)
+    at VM.run (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\vm2\lib\main.js:212:72)
+2019-07-14T22:10:14.130Z - warn: Error during processing request at http://localhost:8001/api/report/invoice-main
+2019-07-14T22:10:33.905Z - info: Starting rendering request 41 (user: null)
+2019-07-14T22:10:33.916Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:10:41.325Z - info: Rendering request 41 finished in 7438 ms
+2019-07-14T22:10:53.314Z - info: Starting rendering request 42 (user: null)
+2019-07-14T22:10:53.323Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:10:57.490Z - info: Rendering request 42 finished in 4176 ms
+2019-07-14T22:14:20.877Z - info: Starting rendering request 43 (user: null)
+2019-07-14T22:14:20.882Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:14:25.606Z - info: Rendering request 43 finished in 4725 ms
+2019-07-14T22:18:47.222Z - info: Starting rendering request 44 (user: null)
+2019-07-14T22:18:47.225Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:18:52.128Z - info: Rendering request 44 finished in 4907 ms
+2019-07-14T22:20:20.587Z - info: Starting rendering request 45 (user: null)
+2019-07-14T22:20:20.590Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:20:25.400Z - info: Rendering request 45 finished in 4815 ms
+2019-07-14T22:21:13.604Z - info: Starting rendering request 46 (user: null)
+2019-07-14T22:21:13.612Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:21:17.889Z - info: Rendering request 46 finished in 4289 ms
+2019-07-14T22:22:33.111Z - info: Verifying license key free
+2019-07-14T22:22:35.900Z - info: Starting one month enterprise trial
+2019-07-14T22:32:15.347Z - info: Starting rendering request 47 (user: null)
+2019-07-14T22:32:15.349Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:32:40.255Z - info: Rendering request 47 finished in 24908 ms
+2019-07-14T22:33:15.895Z - info: Starting rendering request 48 (user: null)
+2019-07-14T22:33:15.942Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:33:20.164Z - info: Rendering request 48 finished in 4275 ms
+2019-07-14T22:34:17.923Z - info: Starting rendering request 49 (user: null)
+2019-07-14T22:34:17.936Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:34:27.817Z - info: Rendering request 49 finished in 9863 ms
+2019-07-14T22:35:37.518Z - info: Starting rendering request 50 (user: null)
+2019-07-14T22:35:37.608Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:35:45.323Z - info: Rendering request 50 finished in 7866 ms
+2019-07-14T22:42:25.385Z - info: Starting rendering request 51 (user: null)
+2019-07-14T22:42:25.387Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:42:33.167Z - info: Rendering request 51 finished in 7782 ms
+2019-07-14T22:44:05.040Z - info: Starting rendering request 52 (user: null)
+2019-07-14T22:44:05.044Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:44:10.726Z - info: Rendering request 52 finished in 5669 ms
+2019-07-14T22:51:54.840Z - info: Starting rendering request 53 (user: null)
+2019-07-14T22:51:54.851Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T22:52:24.288Z - info: Rendering request 53 finished in 29427 ms
+2019-07-14T23:26:05.676Z - info: Starting rendering request 54 (user: null)
+2019-07-14T23:26:05.678Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T23:26:39.323Z - info: Rendering request 54 finished in 33647 ms
+2019-07-14T23:36:33.847Z - info: Starting rendering request 55 (user: null)
+2019-07-14T23:36:33.851Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T23:37:00.820Z - info: Rendering request 55 finished in 26933 ms
+2019-07-14T23:52:16.041Z - info: Starting rendering request 56 (user: null)
+2019-07-14T23:52:16.076Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T23:52:43.700Z - info: Rendering request 56 finished in 27659 ms
+2019-07-14T23:59:06.664Z - info: Starting rendering request 57 (user: null)
+2019-07-14T23:59:06.676Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-14T23:59:38.558Z - info: Rendering request 57 finished in 31871 ms
+2019-07-15T00:12:45.385Z - info: Starting rendering request 58 (user: null)
+2019-07-15T00:12:45.401Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T00:13:02.799Z - info: Rendering request 58 finished in 17416 ms
+2019-07-15T00:20:06.227Z - info: Starting rendering request 59 (user: null)
+2019-07-15T00:20:06.309Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T00:20:14.243Z - info: Rendering request 59 finished in 8024 ms
+2019-07-15T00:21:50.285Z - info: Starting rendering request 60 (user: null)
+2019-07-15T00:21:50.288Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T00:21:59.553Z - info: Rendering request 60 finished in 9188 ms
+2019-07-15T00:23:29.908Z - info: fs store is loading data
+2019-07-15T00:23:45.682Z - info: fs store is loading data
+2019-07-15T00:23:45.686Z - info: fs store is loading data
+2019-07-15T00:23:45.687Z - info: fs store is loading data
+2019-07-15T00:23:45.688Z - info: fs store is loading data
+2019-07-15T00:23:45.689Z - info: fs store is loading data
+2019-07-15T00:23:47.833Z - info: fs store is loading data
+2019-07-15T00:23:53.795Z - error: Error when processing OData PATCH: /odata/templates(rfltYKXDwlkHaCBF) Error: Entity (_id: rfltYKXDwlkHaCBF) was modified previously by another source
+    at module.exports (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-core\lib\reporter.js:288:12)
+    at AsyncFunction.col.beforeUpdateListeners.insert (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-studio\lib\studio.js:336:30)
+    at runNextTicks (internal/process/task_queues.js:52:5)
+    at processImmediate (internal/timers.js:416:9)
+2019-07-15T00:23:54.185Z - error: Error when processing OData PATCH: /odata/templates(rfltYKXDwlkHaCBF) Error: Entity (_id: rfltYKXDwlkHaCBF) was modified previously by another source
+    at module.exports (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-core\lib\reporter.js:288:12)
+    at AsyncFunction.col.beforeUpdateListeners.insert (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\jsreport-studio\lib\studio.js:336:30)
+    at runNextTicks (internal/process/task_queues.js:52:5)
+    at processImmediate (internal/timers.js:416:9)
+2019-07-15T00:23:57.287Z - info: Starting rendering request 61 (user: null)
+2019-07-15T00:23:57.297Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T00:24:21.519Z - info: Starting rendering request 62 (user: null)
+2019-07-15T00:24:21.534Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T00:24:58.477Z - info: Rendering request 62 finished in 36967 ms
+2019-07-15T00:25:01.307Z - info: Rendering request 61 finished in 63974 ms
+2019-07-15T00:28:42.567Z - info: Starting rendering request 63 (user: null)
+2019-07-15T00:28:42.611Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T00:28:54.503Z - info: Rendering request 63 finished in 11773 ms
+2019-07-15T00:38:35.760Z - info: Starting rendering request 64 (user: null)
+2019-07-15T00:38:35.772Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T00:39:00.466Z - info: Rendering request 64 finished in 24705 ms
+2019-07-15T00:47:34.202Z - info: Starting rendering request 65 (user: null)
+2019-07-15T00:47:34.313Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T00:47:46.707Z - info: Rendering request 65 finished in 12505 ms
+2019-07-15T01:10:49.297Z - info: Starting rendering request 66 (user: null)
+2019-07-15T01:10:49.337Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T01:11:14.174Z - info: Rendering request 66 finished in 24881 ms
+2019-07-15T01:16:09.086Z - info: Starting rendering request 67 (user: null)
+2019-07-15T01:16:09.243Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T01:16:15.691Z - info: Rendering request 67 finished in 6611 ms
+2019-07-15T01:19:04.000Z - info: Verifying license key free
+2019-07-15T01:19:06.022Z - info: Using enterprise trial license
+2019-07-15T01:23:29.917Z - info: Starting rendering request 68 (user: null)
+2019-07-15T01:23:29.934Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T01:23:59.909Z - info: Rendering request 68 finished in 30012 ms
+2019-07-15T03:02:10.579Z - info: fs store is loading data
+2019-07-15T03:02:23.498Z - info: Starting rendering request 69 (user: null)
+2019-07-15T03:02:23.932Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T03:02:25.172Z - info: Verifying license key free
+2019-07-15T03:02:33.910Z - info: The licensing server was not reachable during instance startup. The instance now runs in the enterprise mode.
+2019-07-15T03:03:26.855Z - info: Rendering request 69 finished in 63376 ms
+2019-07-15T03:29:15.606Z - info: Starting rendering request 70 (user: null)
+2019-07-15T03:29:15.987Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T03:29:47.315Z - info: Rendering request 70 finished in 31773 ms
+2019-07-15T03:36:49.460Z - info: Starting rendering request 71 (user: null)
+2019-07-15T03:36:49.489Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T03:37:24.462Z - info: Rendering request 71 finished in 35006 ms
+2019-07-15T03:41:39.071Z - info: fs store is loading data
+2019-07-15T03:41:53.439Z - info: Starting rendering request 72 (user: null)
+2019-07-15T03:41:53.506Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T03:43:01.983Z - info: Rendering request 72 finished in 68594 ms
+2019-07-15T03:50:32.910Z - info: Starting rendering request 73 (user: null)
+2019-07-15T03:50:33.039Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T03:51:18.849Z - info: Rendering request 73 finished in 46034 ms
+2019-07-15T03:51:23.062Z - info: fs store is loading data
+2019-07-15T03:56:38.388Z - info: Starting rendering request 74 (user: null)
+2019-07-15T03:56:38.392Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T03:57:02.224Z - info: Rendering request 74 finished in 23841 ms
+2019-07-15T04:24:25.770Z - info: Initializing jsreport@2.5.0 in development mode using configuration file: jsreport.config.json
+2019-07-15T04:24:25.791Z - info: Searching for available extensions in C:\Users\Rafael mendez\Desktop\jsreportapp\
+2019-07-15T04:24:26.935Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Rafael mendez\Desktop\jsreportapp\
+2019-07-15T04:24:30.781Z - info: Found 31 extensions
+2019-07-15T04:24:31.787Z - info: Setting http-server strategy for rendering
+2019-07-15T04:24:33.438Z - info: Using extension cli@2.0.7
+2019-07-15T04:24:33.561Z - info: Using extension debug@2.0.2
+2019-07-15T04:24:33.623Z - info: Using extension express@2.4.0
+2019-07-15T04:24:55.901Z - info: Using extension freeze@2.0.0
+2019-07-15T04:24:56.234Z - info: Using extension handlebars@2.0.2
+2019-07-15T04:24:56.732Z - info: Using extension import-export@1.3.0
+2019-07-15T04:25:22.427Z - info: Using extension jsrender@2.0.0
+2019-07-15T04:25:22.472Z - info: Using extension tags@2.2.0
+2019-07-15T04:25:22.621Z - info: Using extension templates@2.2.0
+2019-07-15T04:25:22.753Z - info: Using extension authorization@2.2.4
+2019-07-15T04:25:23.624Z - info: Using extension base@2.0.2
+2019-07-15T04:25:23.844Z - info: Using extension browser-client@2.1.1
+2019-07-15T04:25:24.349Z - info: Using extension child-templates@1.2.0
+2019-07-15T04:25:24.775Z - info: Using extension chrome-pdf@1.4.0
+2019-07-15T04:25:37.668Z - info: Using extension data@2.1.0
+2019-07-15T04:25:37.911Z - info: Using extension fs-store@2.4.1
+2019-07-15T04:26:29.691Z - info: Using extension licensing@2.1.0
+2019-07-15T04:26:35.154Z - info: Using extension pdf-utils@1.4.0
+2019-07-15T04:27:00.329Z - info: Using extension reports@2.2.0
+2019-07-15T04:27:01.811Z - info: Using extension studio@2.5.1
+2019-07-15T04:27:08.994Z - info: Using extension text@2.0.0
+2019-07-15T04:27:10.000Z - info: Using extension version-control@1.2.3
+2019-07-15T04:27:24.884Z - info: Using extension assets@1.1.3
+2019-07-15T04:27:26.049Z - info: Using extension html-to-xlsx@2.3.1
+2019-07-15T04:27:43.667Z - info: html-to-xlsx detected chrome as available html engine
+2019-07-15T04:27:43.876Z - info: Using extension scheduling@2.0.7
+2019-07-15T04:27:47.380Z - info: Using extension scripts@2.1.0
+2019-07-15T04:27:48.168Z - info: Using extension xlsx@2.0.10
+2019-07-15T04:28:14.756Z - info: Using extension public-templates@2.0.1
+2019-07-15T04:28:14.946Z - info: Using extension resources@2.0.3
+2019-07-15T04:28:15.134Z - info: Using extension sample-template@2.3.0
+2019-07-15T04:28:15.673Z - info: Using fs provider for template store.
+2019-07-15T04:28:15.690Z - info: fs store is persisting using fs
+2019-07-15T04:28:15.692Z - info: fs store is synchronizing using fs
+2019-07-15T04:28:15.758Z - info: fs store is loading data
+2019-07-15T04:28:25.264Z - info: fs store is initialized successfully
+2019-07-15T04:28:25.436Z - info: Creating default express app.
+2019-07-15T04:28:32.408Z - info: jsreport server successfully started on http port: 8001
+2019-07-15T04:28:32.416Z - info: fs store emits sockets to synchronize underlying changes with studio
+2019-07-15T04:28:35.971Z - info: Verifying license key free
+2019-07-15T04:28:39.775Z - info: The licensing server was not reachable during instance startup. The instance now runs in the enterprise mode.
+2019-07-15T04:28:39.909Z - info: reporter initialized
+2019-07-15T04:56:19.012Z - info: Starting rendering request 1 (user: null)
+2019-07-15T04:56:19.046Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T04:56:46.410Z - info: Rendering request 1 finished in 27442 ms
+2019-07-15T04:59:05.804Z - info: Starting rendering request 2 (user: null)
+2019-07-15T04:59:05.808Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T04:59:11.300Z - info: Rendering request 2 finished in 5498 ms
+2019-07-15T04:59:50.955Z - info: Starting rendering request 3 (user: null)
+2019-07-15T04:59:50.959Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T04:59:54.919Z - info: Rendering request 3 finished in 3965 ms
+2019-07-15T05:01:03.804Z - info: Starting rendering request 4 (user: null)
+2019-07-15T05:01:03.807Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:01:08.923Z - info: Rendering request 4 finished in 5136 ms
+2019-07-15T05:01:48.179Z - info: Starting rendering request 5 (user: null)
+2019-07-15T05:01:48.191Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:01:53.155Z - info: Rendering request 5 finished in 4997 ms
+2019-07-15T05:06:40.744Z - info: Starting rendering request 6 (user: null)
+2019-07-15T05:06:40.747Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:06:45.340Z - info: Rendering request 6 finished in 4597 ms
+2019-07-15T05:15:08.688Z - info: Starting rendering request 7 (user: null)
+2019-07-15T05:15:08.702Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:15:13.351Z - info: Rendering request 7 finished in 4731 ms
+2019-07-15T05:27:12.725Z - info: Starting rendering request 8 (user: null)
+2019-07-15T05:27:12.837Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:27:31.357Z - info: Rendering request 8 finished in 18712 ms
+2019-07-15T05:27:31.626Z - info: Starting rendering request 9 (user: null)
+2019-07-15T05:27:31.629Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:27:37.036Z - info: Rendering request 9 finished in 5409 ms
+2019-07-15T05:28:42.571Z - info: Starting rendering request 10 (user: null)
+2019-07-15T05:28:42.574Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:28:46.447Z - info: Rendering request 10 finished in 3878 ms
+2019-07-15T05:32:40.665Z - info: Starting rendering request 11 (user: null)
+2019-07-15T05:32:40.668Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:32:50.589Z - info: Rendering request 11 finished in 9930 ms
+2019-07-15T05:39:33.097Z - info: Starting rendering request 12 (user: null)
+2019-07-15T05:39:33.129Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:39:36.946Z - info: Starting rendering request 13 (user: null)
+2019-07-15T05:39:36.952Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:39:43.611Z - info: Rendering request 13 finished in 6716 ms
+2019-07-15T05:39:45.026Z - info: Rendering request 12 finished in 11949 ms
+2019-07-15T05:40:22.832Z - info: Starting rendering request 14 (user: null)
+2019-07-15T05:40:22.835Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:40:27.026Z - info: Rendering request 14 finished in 4195 ms
+2019-07-15T05:45:44.769Z - info: Starting rendering request 15 (user: null)
+2019-07-15T05:45:44.781Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:45:49.220Z - info: Rendering request 15 finished in 4452 ms
+2019-07-15T05:55:03.087Z - info: Starting rendering request 16 (user: null)
+2019-07-15T05:55:03.091Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:55:09.118Z - info: Rendering request 16 finished in 6034 ms
+2019-07-15T05:56:07.130Z - info: Starting rendering request 17 (user: null)
+2019-07-15T05:56:07.132Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T05:56:11.984Z - info: Rendering request 17 finished in 4874 ms
+2019-07-15T07:34:46.812Z - info: fs store is loading data
+2019-07-15T07:43:57.032Z - info: Starting rendering request 18 (user: null)
+2019-07-15T07:43:57.164Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T07:44:24.580Z - info: Rendering request 18 finished in 27611 ms
+2019-07-15T19:23:52.567Z - info: Starting rendering request 19 (user: null)
+2019-07-15T19:23:53.132Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T19:24:51.523Z - info: Rendering request 19 finished in 59479 ms
+2019-07-15T19:34:29.437Z - info: Starting rendering request 20 (user: null)
+2019-07-15T19:34:29.481Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T19:35:01.145Z - info: Rendering request 20 finished in 31708 ms
+2019-07-15T19:44:53.210Z - info: Starting rendering request 21 (user: null)
+2019-07-15T19:44:53.213Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T19:45:33.529Z - info: Rendering request 21 finished in 40320 ms
+2019-07-15T19:46:52.662Z - info: Starting rendering request 22 (user: null)
+2019-07-15T19:46:52.681Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T19:47:04.048Z - info: Rendering request 22 finished in 11384 ms
+2019-07-15T19:52:39.258Z - info: Starting rendering request 23 (user: null)
+2019-07-15T19:52:39.260Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T19:53:07.022Z - info: Rendering request 23 finished in 27793 ms
+2019-07-15T19:54:24.284Z - info: Starting rendering request 24 (user: null)
+2019-07-15T19:54:24.288Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T19:54:37.604Z - info: Rendering request 24 finished in 13318 ms
+2019-07-15T19:57:39.180Z - info: Starting rendering request 25 (user: null)
+2019-07-15T19:57:39.185Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T19:57:46.152Z - info: Rendering request 25 finished in 6973 ms
+2019-07-15T19:58:31.205Z - info: Starting rendering request 26 (user: null)
+2019-07-15T19:58:31.265Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T19:58:36.376Z - info: Rendering request 26 finished in 5227 ms
+2019-07-15T19:59:48.750Z - info: Starting rendering request 27 (user: null)
+2019-07-15T19:59:48.754Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:00:01.778Z - info: Rendering request 27 finished in 13044 ms
+2019-07-15T20:03:19.197Z - info: Starting rendering request 28 (user: null)
+2019-07-15T20:03:19.199Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:03:37.234Z - info: Rendering request 28 finished in 18046 ms
+2019-07-15T20:06:44.639Z - info: Starting rendering request 29 (user: null)
+2019-07-15T20:06:44.650Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:06:51.237Z - info: Rendering request 29 finished in 6524 ms
+2019-07-15T20:09:50.757Z - info: Starting rendering request 30 (user: null)
+2019-07-15T20:09:50.759Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:09:58.155Z - info: Rendering request 30 finished in 7399 ms
+2019-07-15T20:31:51.609Z - info: Starting rendering request 31 (user: null)
+2019-07-15T20:31:51.610Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:32:32.421Z - info: Rendering request 31 finished in 40812 ms
+2019-07-15T20:35:52.767Z - info: Starting rendering request 32 (user: null)
+2019-07-15T20:35:52.771Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:35:59.575Z - info: Rendering request 32 finished in 6847 ms
+2019-07-15T20:39:08.911Z - info: Starting rendering request 33 (user: null)
+2019-07-15T20:39:08.975Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:39:21.747Z - info: Rendering request 33 finished in 12912 ms
+2019-07-15T20:40:12.139Z - info: Starting rendering request 34 (user: null)
+2019-07-15T20:40:12.141Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:40:19.493Z - info: Rendering request 34 finished in 7356 ms
+2019-07-15T20:43:02.274Z - info: Starting rendering request 35 (user: null)
+2019-07-15T20:43:02.283Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:43:09.558Z - info: Rendering request 35 finished in 7299 ms
+2019-07-15T20:45:59.910Z - info: Starting rendering request 36 (user: null)
+2019-07-15T20:45:59.912Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T20:46:06.226Z - info: Rendering request 36 finished in 6316 ms
+2019-07-15T22:02:31.351Z - info: Starting rendering request 37 (user: null)
+2019-07-15T22:02:31.373Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T22:03:16.532Z - info: Rendering request 37 finished in 45184 ms
+2019-07-15T22:06:42.821Z - info: Starting rendering request 38 (user: null)
+2019-07-15T22:06:42.823Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T22:07:11.656Z - info: Rendering request 38 finished in 28848 ms
+2019-07-15T22:18:54.440Z - info: Starting rendering request 39 (user: null)
+2019-07-15T22:18:54.442Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T22:19:18.699Z - info: Rendering request 39 finished in 24260 ms
+2019-07-15T22:27:57.730Z - info: Starting rendering request 40 (user: null)
+2019-07-15T22:27:57.736Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T22:28:23.189Z - info: Rendering request 40 finished in 25485 ms
+2019-07-15T22:34:18.915Z - info: Starting rendering request 41 (user: null)
+2019-07-15T22:34:18.932Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T22:34:26.188Z - info: Rendering request 41 finished in 7275 ms
+2019-07-15T22:40:32.261Z - info: Starting rendering request 42 (user: null)
+2019-07-15T22:40:32.291Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T22:40:38.357Z - info: Rendering request 42 finished in 6097 ms
+2019-07-15T22:51:51.570Z - info: Starting rendering request 43 (user: null)
+2019-07-15T22:51:51.572Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T22:51:58.371Z - info: Rendering request 43 finished in 6808 ms
+2019-07-15T22:58:44.963Z - info: Starting rendering request 44 (user: null)
+2019-07-15T22:58:44.966Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T22:59:08.736Z - info: Rendering request 44 finished in 23776 ms
+2019-07-15T23:00:34.416Z - info: Starting rendering request 45 (user: null)
+2019-07-15T23:00:34.433Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T23:00:37.995Z - info: Rendering request 45 finished in 3582 ms
+2019-07-15T23:04:10.179Z - info: Starting rendering request 46 (user: null)
+2019-07-15T23:04:10.180Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T23:04:14.956Z - info: Rendering request 46 finished in 4778 ms
+2019-07-15T23:09:53.653Z - info: Starting rendering request 47 (user: null)
+2019-07-15T23:09:53.656Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T23:09:57.518Z - info: Rendering request 47 finished in 3866 ms
+2019-07-15T23:10:27.398Z - info: Starting rendering request 48 (user: null)
+2019-07-15T23:10:27.400Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T23:10:31.199Z - info: Rendering request 48 finished in 3803 ms
+2019-07-15T23:12:55.232Z - info: Starting rendering request 49 (user: null)
+2019-07-15T23:12:55.246Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T23:13:01.285Z - info: Rendering request 49 finished in 6055 ms
+2019-07-15T23:24:51.577Z - info: Starting rendering request 50 (user: null)
+2019-07-15T23:24:51.579Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T23:25:09.176Z - info: Rendering request 50 finished in 17606 ms
+2019-07-15T23:25:54.570Z - info: Starting rendering request 51 (user: null)
+2019-07-15T23:25:54.572Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-15T23:25:58.436Z - info: Rendering request 51 finished in 3870 ms
+2019-07-16T00:54:00.208Z - info: Starting rendering request 52 (user: null)
+2019-07-16T00:54:00.378Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T00:54:55.161Z - info: Rendering request 52 finished in 55324 ms
+2019-07-16T03:48:55.929Z - info: fs store is loading data
+2019-07-16T04:08:00.191Z - info: Starting rendering request 53 (user: null)
+2019-07-16T04:08:00.229Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:08:42.906Z - info: Rendering request 53 finished in 42730 ms
+2019-07-16T04:10:55.085Z - info: Starting rendering request 54 (user: null)
+2019-07-16T04:10:55.099Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:11:02.913Z - info: Rendering request 54 finished in 7851 ms
+2019-07-16T04:11:26.726Z - info: Starting rendering request 55 (user: null)
+2019-07-16T04:11:26.737Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:11:31.831Z - info: Rendering request 55 finished in 5117 ms
+2019-07-16T04:19:28.984Z - info: Starting rendering request 56 (user: null)
+2019-07-16T04:19:29.130Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:19:59.664Z - info: Rendering request 56 finished in 30731 ms
+2019-07-16T04:21:08.843Z - info: Starting rendering request 57 (user: null)
+2019-07-16T04:21:09.077Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:21:32.749Z - info: Rendering request 57 finished in 23993 ms
+2019-07-16T04:22:48.391Z - info: Starting rendering request 58 (user: null)
+2019-07-16T04:22:48.560Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:23:05.376Z - info: Rendering request 58 finished in 17064 ms
+2019-07-16T04:23:20.112Z - info: Starting rendering request 59 (user: null)
+2019-07-16T04:23:20.204Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:23:30.817Z - info: Rendering request 59 finished in 10753 ms
+2019-07-16T04:24:12.398Z - info: Starting rendering request 60 (user: null)
+2019-07-16T04:24:12.406Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:24:29.919Z - info: Rendering request 60 finished in 17538 ms
+2019-07-16T04:24:55.451Z - info: Starting rendering request 61 (user: null)
+2019-07-16T04:24:55.453Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T04:25:05.176Z - info: Rendering request 61 finished in 9715 ms
+2019-07-16T12:32:42.879Z - info: Starting rendering request 62 (user: null)
+2019-07-16T12:32:43.342Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T12:33:10.584Z - info: Starting rendering request 63 (user: null)
+2019-07-16T12:33:12.011Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T12:33:12.012Z - info: fs store is loading data
+2019-07-16T12:34:00.276Z - error: Error when processing render request Timed out after 30000 ms while trying to connect to Chrome! The only Chrome revision guaranteed to work is r662092 TimeoutError: Timed out after 30000 ms while trying to connect to Chrome! The only Chrome revision guaranteed to work is r662092
+    at Timeout.onTimeout (C:\Users\Rafael mendez\Desktop\jsreportapp\node_modules\puppeteer\lib\Launcher.js:353:14)
+    at listOnTimeout (internal/timers.js:535:17)
+    at processTimers (internal/timers.js:479:7)
+2019-07-16T12:34:00.470Z - error: Error during processing request at http://localhost:8001/api/report
+2019-07-16T12:34:43.155Z - info: Rendering request 63 finished in 92582 ms
+2019-07-16T12:35:25.670Z - info: Starting rendering request 64 (user: null)
+2019-07-16T12:35:25.682Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T12:35:36.125Z - info: Rendering request 64 finished in 10464 ms
+2019-07-16T18:07:52.088Z - info: Starting rendering request 65 (user: null)
+2019-07-16T18:07:52.294Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T18:08:30.523Z - info: Rendering request 65 finished in 38633 ms
+2019-07-16T19:05:40.588Z - info: Starting rendering request 66 (user: null)
+2019-07-16T19:05:40.602Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:05:57.977Z - info: Rendering request 66 finished in 17400 ms
+2019-07-16T19:07:25.455Z - info: Starting rendering request 67 (user: null)
+2019-07-16T19:07:25.477Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:07:29.286Z - info: Rendering request 67 finished in 3833 ms
+2019-07-16T19:09:06.281Z - info: Starting rendering request 68 (user: null)
+2019-07-16T19:09:06.290Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:09:10.239Z - info: Rendering request 68 finished in 3960 ms
+2019-07-16T19:10:55.611Z - info: Starting rendering request 69 (user: null)
+2019-07-16T19:10:55.623Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:10:59.628Z - info: Rendering request 69 finished in 4019 ms
+2019-07-16T19:12:14.319Z - info: Starting rendering request 70 (user: null)
+2019-07-16T19:12:14.321Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:12:17.758Z - info: Rendering request 70 finished in 3440 ms
+2019-07-16T19:15:31.930Z - info: Starting rendering request 71 (user: null)
+2019-07-16T19:15:31.935Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:15:37.222Z - info: Rendering request 71 finished in 5302 ms
+2019-07-16T19:22:19.117Z - info: Starting rendering request 72 (user: null)
+2019-07-16T19:22:19.118Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:22:24.873Z - info: Rendering request 72 finished in 5758 ms
+2019-07-16T19:23:23.173Z - info: Starting rendering request 73 (user: null)
+2019-07-16T19:23:23.205Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:23:26.263Z - info: Rendering request 73 finished in 3130 ms
+2019-07-16T19:24:48.360Z - info: Starting rendering request 74 (user: null)
+2019-07-16T19:24:48.364Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:24:52.880Z - info: Rendering request 74 finished in 4521 ms
+2019-07-16T19:26:18.544Z - info: Starting rendering request 75 (user: null)
+2019-07-16T19:26:18.546Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:26:22.489Z - info: Rendering request 75 finished in 3962 ms
+2019-07-16T19:27:41.729Z - info: Starting rendering request 76 (user: null)
+2019-07-16T19:27:41.742Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2019-07-16T19:27:44.995Z - info: Rendering request 76 finished in 3289 ms
+2019-07-18T02:57:59.802Z - info: fs store is loading data

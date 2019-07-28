@@ -1,0 +1,25 @@
+{
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "data": {
+        "shortid": "Sy5S19ncg"
+    },
+    "name": "invoice-main",
+    "chrome": {
+        "printBackground": true,
+        "marginTop": "1cm",
+        "marginRight": "1cm",
+        "marginBottom": "1cm",
+        "marginLeft": "1cm"
+    },
+    "creationDate": "2019-07-14T23:31:52.936Z",
+    "modificationDate": {
+        "$$date": 1563147314874
+    },
+    "folder": {
+        "shortid": "y9OrL48"
+    },
+    "_id": "nppfHnOEaNyVXuq1",
+    "shortid": "qHmjstz",
+    "$entitySet": "templates"
+}

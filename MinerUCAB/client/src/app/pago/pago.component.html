@@ -1,0 +1,199 @@
+<app-header></app-header>
+<br>
+
+<div class="container">
+  <h1>Pagos</h1>
+  <hr>
+
+  <div *ngIf="tipoPago == ''">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="form-group">
+              <label for="exampleSelect1">Seleccione Banco</label>
+              <select class="form-control" id="exampleSelect1" name="BANK" [(ngModel)]="banco">
+                <option>Seleccione Opción</option>
+                <option>Banco de Venezuela</option>
+                <option>Banco Mercantil</option>
+                <option>Bancaribe</option>
+                <option>Banco Venezolano de Crédito</option>      
+                <option>Banesco</option>      
+              </select>
+            </div>
+        </div>      
+
+      <div class="col-md-6 offset-2">
+        <p>Monto a Pagar: ${{cart.monto}}</p>
+        <p>Monto cubierto: ${{cubierto}}</p>
+        <hr>
+        <button (click)="pay()" class="btn btn-primary">Pagar</button>
+      </div>
+
+      <div class="col-md-4">
+          <div class="form-group" style="margin-top: -5px">
+            <label for="exampleSelect1">Seleccione método de pago</label>
+            <select class="form-control" id="exampleSelect1" name="TP" [(ngModel)]="tipoPago">
+              <option>Seleccione Opción</option>
+              <option>Transferencia</option>
+              <option>Tarjeta de Crédito</option>
+              <option>Tarjeta de Débito</option>
+              <option>Cheque</option>      
+            </select>
+          </div>
+      </div>
+
+    </div>
+ 
+
+    <!----<button (click)="evento()" class="btn btn-primary">Siguiente</button>-->
+  </div>
+
+  
+    <div *ngIf="tipoPago == 'Transferencia'">
+      <div class="col-sm-12 col-md-4 col-bg-4">
+        <label>Monto a Pagar:</label>
+        <input class="form-control form-control-md" type="text" name="monto" [(ngModel)]="montoPagar" placeholder="Monto ($)">
+        <br>
+      </div>
+
+      <button (click)="evento('Transferencia')" class="btn btn-primary">Confirmar</button>
+    </div>
+
+    <div *ngIf="tipoPago == 'Tarjeta de Crédito'">
+        <div class="col-md-4">
+            <div class="form-group">
+              <label for="exampleSelect1">Seleccione Tipo de Tarjeta de Crédito</label>
+              <select class="form-control" id="exampleSelect1" name="TC" [(ngModel)]="tarjetaCredito">
+                <option>Seleccione Opción</option>
+                <option>Visa</option>
+                <option>American Express</option>
+                <option>Mastercard</option>                     
+              </select>
+            </div>
+        </div>
+
+        <label>Fecha de Vencimiento de la Tarjeta</label>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="exampleSelect1">Día</label>
+              <select class="form-control" id="exampleSelect1" name="dia" [(ngModel)]="diaV">
+                <option>Seleccione una opción</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>                    
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="exampleSelect1">Mes</label>
+              <select class="form-control" id="exampleSelect1" name="mes" [(ngModel)]="mesV">
+                <option>Seleccione una opción</option>
+                <option>01-Enero</option>
+                <option>02-Febrero</option>
+                <option>03-Marzo</option>
+                <option>04-Abril</option>
+                <option>05-Mayo</option>
+                <option>06-Junio</option>
+                <option>07-Julio</option>
+                <option>08-Agosto</option>
+                <option>09-Septiembre</option>
+                <option>10-Octubre</option>
+                <option>11-Noviembre</option>
+                <option>12-Diciembre</option>                                                   
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <label>Año</label>
+            <input class="form-control form-control-md" type="text" name="year" [(ngModel)]="yearV" placeholder="Año">
+            <br>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-bg-4">
+          <label>Monto a Pagar:</label>
+          <input class="form-control form-control-md" type="text" name="monto" [(ngModel)]="montoPagar" placeholder="Monto ($)">
+          <br>
+        </div>
+
+        <button (click)="evento('TC')" class="btn btn-primary">Confirmar</button>
+    </div>
+
+    <div *ngIf="tipoPago == 'Cheque'">
+
+      <div class="col-sm-12 col-md-4 col-bg-4">
+        <label>Número de Cuenta</label>
+        <input class="form-control form-control-md" type="text" name="cuenta" [(ngModel)]="numeroCuenta" placeholder="Número de Cuenta">
+        <br>
+      </div>
+
+      <div class="col-sm-12 col-md-4 col-bg-4">
+        <label>Monto a Pagar:</label>
+        <input class="form-control form-control-md" type="text" name="monto" [(ngModel)]="montoPagar" placeholder="Monto ($)">
+        <br>
+      </div>
+
+      <button (click)="evento('Cheque')" class="btn btn-primary">Confirmar</button>
+
+    </div>
+
+    <div *ngIf="tipoPago == 'Tarjeta de Débito'">
+
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="exampleSelect1">Seleccione Tipo de Tarjeta de Débito</label>
+          <select class="form-control" id="exampleSelect1" name="TD" [(ngModel)]="tarjetaDebito">
+            <option>Seleccione Opción</option>
+            <option>Maestro</option>
+            <option>Visa Electron</option>                                
+          </select>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4 col-bg-4">
+      <label>Monto a Pagar:</label>
+      <input class="form-control form-control-md" type="text" name="monto" [(ngModel)]="montoPagar" placeholder="Monto ($)">
+      <br>
+    </div>
+
+    <button (click)="evento('TD')" class="btn btn-primary">Confirmar</button>
+
+    </div>
+  
+</div>
+
+<br>
+
+<app-footer></app-footer>

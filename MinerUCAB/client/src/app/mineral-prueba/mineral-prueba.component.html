@@ -1,0 +1,45 @@
+<app-header></app-header>
+<br>
+
+
+<div class="container">
+  
+  
+
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Add to Cart</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mineral of minerales">
+        <td>{{ mineral.id }}</td>
+        <td>{{ mineral.nombre }}</td>
+        <td>{{ mineral.tipo }}</td>
+        <td><input class="form-control form-control-md" type="text" placeholder="Cantidad en Kg"><button (click)="agregarMineral(mineral)" class="links"><i class="fas fa-plus-circle px-1"></i>Agregar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <br>
+
+  
+    <button *ngIf="vista == ''" class="links" (click)="gotoAgregarMineral()">
+      <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nuevo Mineral</p>        
+    </button>
+
+    <button *ngIf="vista != ''" class="btn btn-primary" (click)="gotoInicio()">
+      Finalizar
+    </button>
+    
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

@@ -1,0 +1,138 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+  <h1 class="text-center">Inicio</h1><hr><br>
+  <div class="row">
+    
+    <div class="col-md-4 offset-2">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header text-center">
+          <h2>Productos</h2>
+        </div>
+        <div class="card-body">
+          <!---- <h4 class="card-title">Primary card title</h4> -->
+          <p class="card-text" style="text-align: justify">Venezuela posee gran variedad de yacimientos minerales, entre ellos metálicos y no metálicos. Dentro de los minerales metálicos tenemos: aluminio (Bauxita), cobre, níquel, hierro, oro, plata, plomo, zinc, mercurio, entre otros.</p>
+          <button class="btn btn-primary btn-block" (click)="gotoProducts()">Ver</button>
+        </div>        
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header text-center">
+          <h2>Reportes</h2>
+        </div>
+        <div class="card-body">                  
+          <p class="card-text" style="text-align: justify">En toda empresa es importante llevar un control de las operaciones que se realizan, con lo cual se podrán realizar estimaciones tanto a corto como a largo plazo para asi garantizar (dentro de lo que cabe), un buen futuro para la empresa.</p>
+          <button class="btn btn-primary btn-block" (click)="gotoReports()">Ver</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 offset-2">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header text-center">
+          <h2>Clientes</h2>
+        </div>
+        <div class="card-body">                  
+          <p class="card-text" style="text-align: justify">Nuestra clientela se expande no solo a nivel nacional sino tambien internacional. Son un pilar muy importante para la evolución de nuestra empresa y buscamos ofrecerles calidad en nuestros productos.</p>
+          <button class="btn btn-primary btn-block" (click)="gotoSell()">Vender</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header text-center">
+          <h2>Aliados</h2>
+        </div>
+        <div class="card-body">                 
+          <p class="card-text" style="text-align: justify">A pesar de contar con nuestros propios yacimientos y por ende realizar nuestras propias explotaciones para así obtener minerales, es importante contar con aliados que nos respalden en caso de necesitarlo.</p>
+          <button class="btn btn-primary btn-block" (click)="gotoBuy()">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br><hr>
+
+  <h2 class="text-center">Administración de empresa</h2><br>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 text-center">
+        <button class="links" (click)="gotoCRUD('Empleados')">
+          <p>Empleados</p>
+          <i class="fas fa-user-tie" style="font-size:45px"></i>
+        </button>
+      </div>
+      
+      <div class="col-md-3 text-center">
+        <button class="links" (click)="gotoCRUD('Usuarios')">
+          <p>Usuarios</p>
+          <i class="fas fa-cog" style="font-size:45px"></i>
+        </button>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <button class="links" (click)="gotoCRUD('Yacimientos')">
+          <p>Yacimientos</p>
+          <i class="fas fa-tools" style="font-size:45px"></i>
+        </button>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <button class="links" (click)="gotoCRUD('Minerales')">
+          <p>Minerales</p>
+          <i class="fas fa-gem" style="font-size:45px"></i>
+        </button>
+      </div>      
+
+      
+
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 text-center">
+        <button class="links" (click)="gotoCRUD('Maquinas')">
+          <p>Maquinaria</p>
+          <i class="fas fa-truck-moving" style="font-size:45px"></i>
+        </button>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <button class="links" (click)="gotoCRUD('Proyectos')">
+          <p>Proyectos</p>
+          <i class="fas fa-business-time" style="font-size:45px"></i>
+        </button>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <button class="links" (click)="gotoFact('Facturas')">
+          <p>Facturas</p>
+          <i class="fas fa-file-invoice" style="font-size:45px"></i>
+        </button>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <button class="links" (click)="gotoCRUD('Clientes')">
+          <p>Clientes</p>
+          <i class="fas fa-user" style="font-size:45px"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<br>
+
+<app-footer></app-footer>

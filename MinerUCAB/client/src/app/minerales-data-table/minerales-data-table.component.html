@@ -1,0 +1,129 @@
+<app-header></app-header>
+<br>
+
+<div *ngIf="vista == 'AsociarMP'" class="container">
+
+  <h1>Asociar Presentación a Mineral</h1>
+  
+  <hr><br>
+
+  <p>Para asociarle una presentación a un mineral, debe primero seleccionar el tipo de presentación a través del menú desplegable y posteriormete seleccionar en la columna SELECT de la tabla, el mineral al cual se el quiere asociar la presentación.</p>
+  <p>Recuerde que una vez presionado el boton de SELECT, automáticamente se creara una asociación entre el mineral y el tipo de presentación seleccionados</p>
+  <p>Una vez haya terminado de realizar las respectivas asociaciones, presione el botón de finalizar para volver al menú de Inicio.</p>
+
+  
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="exampleFormControlSelect1"><b>Seleccionar Tipo de Presentación</b></label>
+        <select class="form-control" name="estado" [(ngModel)]="presentacion[0].tipo" id="exampleFormControlSelect1">
+          <option>Seleccionar Opción</option>
+          <option *ngFor="let presentacion of presentaciones">
+            <div>{{presentacion.id}}-{{presentacion.tipo}} de {{presentacion.cantidad}} Kg</div>
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="vista == Compra" class="container">
+
+  <h1>Comprar Minerales</h1>
+
+</div>
+
+<div *ngIf="vista == 'AsociarYM'" class="container">
+
+  <h1>Agregar Minerales en Yacimiento</h1>
+
+  <hr><br>
+
+  <p>A continuación se muestra una tabla con todos los minerales que tiene MinerUCAB registrados en su Base de Datos. Por favor, seleccione aquellos Minerales que se podrán extraer una vez explotado el Yacimientos que se está configurando.</p>
+  <p>Una vez haya seleccionado un Mineral, éste sera automaticamente eliminado de la tabla.</p>
+  <p>Una vez haya terminado de realizar las respectivas asociaciones, presione el botón de finalizar para volver al menú de Inicio.</p>
+
+</div>
+
+<div *ngIf="vista == 'ComponerMM' && aComponer == false" class="container">
+
+  <h1>Composición de Minerales</h1>
+
+  <hr><br>
+
+  <p>A continuación se muestra una tabla con todos los Minerales que tiene MinerUCAB registrados en su Base de Datos. Por favor, seleccione el Mineral al cual se le agregaran los Minerales que lo Componen.</p>  
+
+</div>
+
+<div *ngIf="aComponer == true" class="container">
+
+  <h1>Composición de Mineral: {{mineralNombre2}}</h1>
+
+  <hr><br>  
+
+  <p>Seleccione los Minerales que componen al Mineral: <b>{{mineralNombre2}}</b></p>
+
+  <p *ngIf="created == true" style="color: green">Mineral '{{mineralNombre1}}'' asociado exitosamente!</p>
+
+</div>
+
+<div class="container">
+  <div *ngIf="loading == true" class="div">
+    <h3>Cargando Información</h3>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>   
+  </div>
+</div>
+
+<div class="container">
+  
+  <div *ngIf="vista != ''" class="div">
+    <br>
+    <label><b>Seleccionar Mineral</b></label>    
+  </div>  
+
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+      <thead>
+        <tr>        
+          <th>Nombre</th>
+          <th>Tipo</th> 
+          <th *ngIf="vista == ''">Edit / Delete</th>
+          <th *ngIf="vista == 'AsociarMP'">Select</th>
+          <th *ngIf="vista == 'Compra'">Select</th>
+          <th *ngIf="vista == 'AsociarYM'">Agregar</th>
+          <th *ngIf="vista == 'ComponerMM'">Select</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mineral of minerales">
+          <td>{{mineral.nombre}}</td>
+          <td>{{mineral.tipo}}</td>                  
+          <td *ngIf="vista == ''"><a [routerLink]="['/minerales/edit', mineral.id]" ><i class="fas fa-edit"></i></a>  /  <button class="links" (click)="deleteMineral(mineral)"><i class="far fa-trash-alt"></i></button></td>
+          <td *ngIf="vista == 'AsociarMP'"><button class="links" (click)="asociar(mineral.id, mineral.costo)"><i class="fas fa-plus-circle"></i></button></td>
+          <td *ngIf="vista == 'AsociarYM'"><button class="links" (click)="asociar(mineral.id, 0)"><i class="fas fa-plus-circle"></i></button></td>
+          <td *ngIf="vista == 'Compra'"><button class="links"><i class="fas fa-plus-circle"></i></button></td>
+          <td *ngIf="vista == 'ComponerMM'"><button class="links" (click)="componer(mineral)"><i class="fas fa-plus-circle"></i></button></td>          
+        </tr>               
+      </tbody>    
+    </table>
+  
+  
+  <br>
+
+  
+    <button *ngIf="vista == ''" class="links" (click)="gotoAgregarMineral()">
+      <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nuevo Mineral</p>        
+    </button>
+
+    <button *ngIf="vista != ''" class="btn btn-primary" (click)="gotoInicio()">
+      Finalizar
+    </button>
+    
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

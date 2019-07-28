@@ -1,0 +1,54 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+
+    <h2>Agregar Máquinas a Fase #{{numeroFase}}</h2>
+
+    <p>{{nombreMaquinaNecesaria}} necesarias: {{cantidadMaquinas}}</p>
+    <p>{{nombreMaquinaNecesaria}} agregadas: {{cantidadMaquinasAgregadas}}</p>
+
+    <!----<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+        <thead>
+            <tr>                
+              <th>ID</th>
+              <th>Tipo de Máquina</th> 
+              <th>Select</th>              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let maquina of maquinas">            
+              <td>{{maquina.id}}</td>
+              <td>{{maquina.tipo_maquina}}</td>                                
+              <td><button class="links" (click)="agregarMaquina(maquina)"><i class="fas fa-plus-circle"></i></button></td>
+            </tr>               
+        </tbody>
+    </table>-->
+
+</div>
+
+<div class="container">
+
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tipo de Máquina</th>
+            <th>Select</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let maquina of maquinas">
+            <td>{{maquina.id}}</td>
+            <td>{{maquina.tipo_maquina}}</td>
+            <td></td>
+          </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

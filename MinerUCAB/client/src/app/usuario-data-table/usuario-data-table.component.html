@@ -1,0 +1,46 @@
+<app-header></app-header>
+<br>
+
+<div class="container">
+  <div *ngIf="loading == true" class="div">
+    <h3>Cargando Información</h3>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>   
+  </div>
+</div>
+
+<div class="container">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>        
+        <th>Usuario</th>
+        <th>Nombre</th>
+        <th>Apellido</th> 
+        <th>Rol</th>
+        <th>Edit / Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{usuario.login}}</td>
+          <td>{{usuario.nombre}}</td>
+          <td>{{usuario.apellido}}</td>
+          <td>{{usuario.rol}}</td>                  
+          <td><a [routerLink]="['/usuarios/edit', usuario.id]" ><i class="fas fa-edit"></i></a>  /  <button (click)="eliminarUsuario(usuario)" class="links"><i class="far fa-trash-alt"></i></button></td>
+        </tr>               
+      </tbody>    
+  </table>  
+
+  <br>
+
+      <button class="links" (click)="gotoAgregarUsuario()">
+          <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nuevo Usuario</p>        
+      </button>
+    
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

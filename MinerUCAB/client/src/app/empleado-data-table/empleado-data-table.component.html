@@ -1,0 +1,57 @@
+<app-header></app-header>
+<br>
+
+<div *ngIf="vista == 'AsociarEH'" class="container">
+
+    <h1>Asociar Presentación a Mineral</h1>
+  
+    <hr><br>
+
+    <p>A continuación, se le presenta una tabla con todos los empleados registrados en la Base de Datos de MinerUCAB. Por favor, escoja a qué empleado se le va a asignar un turno.</p>
+
+</div>
+
+<div class="container">
+  <div *ngIf="loading == true" class="div">
+    <h3>Cargando Información</h3>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>   
+  </div>
+</div>
+
+<div class="container">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>        
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Salario</th> 
+        <th *ngIf="vista == ''">Edit / Delete</th>
+        <th *ngIf="vista == 'AsociarEH'">Seleccionar</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{empleado.nombre}}</td>
+          <td>{{empleado.apellido}}</td>  
+          <td>{{empleado.salario}}</td>
+          <td *ngIf="vista == ''"><a [routerLink]="['/empleados/edit', empleado.id]" ><i class="fas fa-edit"></i></a>  /  <button class="links" (click)="eliminarEmpleado(empleado)"><i class="far fa-trash-alt"></i></button></td>
+          <td *ngIf="vista == 'AsociarEH'"><button class="links" (click)="gotoTurnos()"><i class="fas fa-edit"></i></button></td>
+        </tr>               
+      </tbody>    
+  </table>  
+
+  <br>
+
+  
+      <button *ngIf="vista == ''" class="links" (click)="gotoAgregarEmpleado()">
+          <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nuevo Empleado</p>        
+      </button>      
+    
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

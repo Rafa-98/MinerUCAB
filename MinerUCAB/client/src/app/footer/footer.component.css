@@ -1,0 +1,10 @@
+.links {
+    all: unset;
+    color:black;    
+}
+
+.links:hover{
+    color: rgb(233, 84, 32);
+    cursor: pointer;
+    text-decoration: underline;
+}

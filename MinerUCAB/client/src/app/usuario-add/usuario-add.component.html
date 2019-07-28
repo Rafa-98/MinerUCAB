@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+  <h1>{{caso}} Usuario</h1>
+
+  <hr><br>
+
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6 col-bg-4">
+      <label>Nombre de Usuario</label>
+      <input class="form-control form-control-md" type="text" name="usuario" [(ngModel)]="usuario[0].login" placeholder="User">
+      <br>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-bg-4">
+      <label>Contraseña</label>
+      <input class="form-control form-control-md" type="text" name="password" [(ngModel)]="usuario[0].password" placeholder="Password">
+      <br>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-bg-4">
+        <label>ID del usuario al que pertenecera el usuario</label>
+        <input class="form-control form-control-md" type="text" name="id" [(ngModel)]="usuario[0].empleado" placeholder="ID">
+        <br>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-bg-4">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Seleccionar rol del usuario</label>
+          <select class="form-control col-md-5" name="rol" [(ngModel)]="usuario[0].rol" id="tipoMineral" [disabled]="false">                          
+            <option>Seleccionar opción</option>
+            <option *ngFor="let rol of roles">
+              <div>{{rol.id}}-{{rol.nombre}}</div>
+            </option>                          
+          </select>
+        </div>
+    </div>
+
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="agregarUsuario()">{{caso}}</button>
+
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

@@ -1,0 +1,82 @@
+<app-header></app-header>
+<br>
+
+<div *ngIf="vista == 'AsociarYM'" class="container">
+
+  <h1>Asociar Minerales con Yacimiento</h1>
+  
+  <hr><br>
+
+  <p>A continuación se presenta una tabla con todos los yacimientos que MinerUCAB tiene registrado en su Base de Datos. Por favor, seleccione el yacimiento al cual se le quiere asociar Minerales</p>  
+
+</div>
+
+<div *ngIf="vista == 'Explotar'" class="container">
+
+  <h1>Explotación de Yacimiento</h1>  
+
+  <hr><br>
+
+  <div *ngIf="ordenVenta == false" class="col-sm-12 col-md-6 col-bg-4">
+      <label>Cantidad de Carbón a ser extraído (en Kg):</label>
+      <input class="form-control form-control-md" type="text" name="Cantidad" [(ngModel)]="cantCarbon" placeholder="Cantidad KG">
+      <br>
+  </div>
+
+  <br>
+
+  <p>A continuación, se presenta una tabla con todos los yacimientos que MinerUCAB tiene registrado en su Base de Datos. Por favor, escoja el yacimiento al cual será explotado.</p>
+
+</div>
+
+<div class="container">
+  <div *ngIf="loading == true" class="div">
+    <h3>Cargando Información</h3>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>   
+  </div>
+</div>
+
+<div class="container">
+  
+  <div *ngIf="vista != ''" class="div">
+    <br>
+    <label><b>Seleccionar Yacimiento</b></label>    
+  </div>
+
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>                
+        <th>Nombre</th>
+        <th>Tamaño</th> 
+        <th>Tipo</th>
+        <th *ngIf="vista == ''">Edit / Delete</th>
+        <th *ngIf="vista == 'AsociarYM'">Seleccionar</th>
+        <th *ngIf="vista == 'Explotar'">Seleccionar</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let yacimiento of yacimientos">            
+          <td>{{yacimiento.nombre}}</td>
+          <td>{{yacimiento.size}}</td>
+          <td>{{yacimiento.tipo}}</td>                  
+          <td *ngIf="vista == ''"><a [routerLink]="['/yacimientos/edit', yacimiento.id]" ><i class="fas fa-edit"></i></a>  /  <button (click)="deleteYacimiento(yacimiento)" class="links"><i class="far fa-trash-alt"></i></button></td>
+          <td *ngIf="vista == 'AsociarYM'"><button class="links" (click)="gotoMinerales(yacimiento.id)"><i class="fas fa-plus-circle"></i></button></td>                                                    
+          <td *ngIf="vista == 'Explotar'"><button class="links" (click)="gotoCrearEtapa(yacimiento)"><i class="fas fa-plus-circle"></i></button></td>
+        </tr>               
+      </tbody>    
+  </table>  
+
+  <br>
+
+      <button *ngIf="vista == ''" class="links" (click)="gotoAgregarYacimiento()">
+          <p><i class="fas fa-plus-circle px-1" style="font-size: 30px"></i> Agregar Nuevo Yacimiento</p>        
+      </button>
+    
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

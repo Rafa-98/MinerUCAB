@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>nombre</th>
+        <th>Seleccionar</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let aliado of aliados">
+        <td>{{aliado.id}}</td>
+        <td>{{aliado.nombre}}</td>
+        <td><button (click)="irMinerales()"><i class="fas fa-plus-circle"></i></button></td>
+      </tr>      
+    </tbody>
+  </table>
+</div>
+
+
+<hr><br>
+
+<div class="container">
+  <button class="btn btn-primary" (click)="irMinerales()">ir a minerales</button>
+</div>
+
+<hr><br>
+
+<div class="container">
+  <button type="button" (click)="backInicio()" class="btn btn-primary">Ir a Inicio</button>
+</div>
+
+<br>
+
+<app-footer></app-footer>

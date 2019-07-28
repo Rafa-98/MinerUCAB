@@ -1,0 +1,84 @@
+<app-header></app-header>
+
+<br>
+
+  <div class="container">
+
+    <div *ngIf="vista == 'Compra'">
+
+      <h1>Órdenes de Compras procesadas (Recibidas)</h1>
+
+      <hr><br>
+
+      <div class="row">
+        <div class="col-md-6">
+            <ul *ngFor="let orden of ordenesCompra" class="caja">
+              <li>Factura #{{orden.id}} -- Fecha del pedido: {{orden.fecha[0]}}<br><button class="links" (click)="detalles(orden.id)" style="margin-left: 5px">Ver detalles</button><br></li>                
+            </ul>
+        </div>
+
+        <div *ngIf="show == true" class="col-md-6">
+            <h4>Factura #{{factura}}</h4>
+            <table class="table table-hover">
+              <tr>
+                <th>Mineral</th>
+                <th>Cantidad (Kg)</th>
+              </tr>
+              <tr *ngFor="let pedido of pedidos">
+                <td>{{pedido.mineral}}</td>
+                <td>{{pedido.cantidad}}</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>{{total}} Kg</td>
+              </tr>
+            </table>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div *ngIf="vista == 'Venta'">
+      <h1>Órdenes de Venta procesadas (Recibidas)</h1>
+      <hr><br>
+
+      <div class="row">
+        <div class="col-md-6">
+            <ul *ngFor="let orden of ordenesVenta" class="caja">
+              <li>Factura #{{orden.id}} -- Fecha del pedido: {{orden.fecha[0]}}<br><button class="links" (click)="detalles(orden.id)" style="margin-left: 5px">Ver detalles</button></li>                
+            </ul>
+        </div>                      
+
+          <div *ngIf="show == true" class="col-md-6">
+            <h4>Factura #{{factura}}</h4>
+            <table class="table table-hover">
+              <tr>
+                <th>Mineral</th>
+                <th>Cantidad (Kg)</th>
+                <th>Presentación</th>
+              </tr>
+              <tr *ngFor="let factura of facturaMin">
+                <td>{{factura.nombrem}}</td>
+                <td>{{factura.cantidad}}</td>
+                <td>{{factura.tipo}} de {{factura.kg}} Kg</td>
+              </tr>
+              <tr>
+                <td> </td>
+                <td>Total</td>
+                <td>{{total}} Kg</td>
+              </tr>
+            </table>
+          </div>
+
+      </div>
+
+    </div>
+
+    <button class="btn btn-primary" (click)="volverFact()">Volver</button>
+
+  </div>
+
+<br>
+
+<app-footer></app-footer>

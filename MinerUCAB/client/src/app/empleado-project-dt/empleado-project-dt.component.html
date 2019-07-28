@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+
+  <div >
+    <h2>Agregar Empleados a Fase #{{numeroFase}}</h2>
+
+    <p>{{nombreCargoNecesario}} necesarios: {{cantidadEmpleados}}</p>
+    <p>{{nombreCargoNecesario}} agregados: {{cantidadEmpleadosAgregados}}</p>
+  </div>
+
+  <!----<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+      <thead>
+          <tr>                            
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cargo</th>
+            <th>Select</th>              
+          </tr>
+      </thead>      
+      <tbody>          
+        <tr *ngFor="let empleado of empleados">
+          <th>{{empleado.nombre}}</th>
+          <th>{{empleado.apellido}}</th>
+          <th>{{empleado.cargo}}</th>
+          <td><button class="links" (click)="agregarEmpleado(empleado)"><i class="fas fa-plus-circle"></i></button></td>
+        </tr> 
+      </tbody>
+  </table> -->
+
+  <table class="table table-hover">
+      <thead>
+          <tr>                            
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cargo</th>
+            <th>Select</th>              
+          </tr>
+      </thead>      
+      <tbody>          
+        <tr *ngFor="let empleado of empleados">
+          <th>{{empleado.nombre}}</th>
+          <th>{{empleado.apellido}}</th>
+          <th>{{empleado.cargo}}</th>
+          <td><button class="links" (click)="agregarEmpleado(empleado)"><i class="fas fa-plus-circle"></i></button></td>
+        </tr> 
+      </tbody>
+  </table>
+
+    <br>
+
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

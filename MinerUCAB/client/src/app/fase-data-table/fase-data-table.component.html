@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+        <thead>
+          <tr>        
+            <th>Numero de Fase</th>
+            <th>Fecha de Inicio</th>            
+            <th>Fecha de Finalizacion (Estimada)</th> 
+            <th>Estatus</th> 
+            <th>Iniciar Fase</th>          
+            <th>Terminar Fase</th>
+            <th>Edit / Delete</th>               
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fase of fases">
+            <td>{{fase.numero}}</td>
+            <td>{{fase.inicio}}</td>
+            <td>{{fase.fin}}</td>
+            <td>{{fase.nombre}}</td>
+            <td><button class="links" (click)="iniciarFase(fase)"><i class="fas fa-plus"></i></button></td>
+            <td><button class="links" (click)="terminarFase(fase)"><i class="fas fa-plus"></i></button></td>
+            <td><a [routerLink]="['/fase/edit', fase.id]" ><i class="fas fa-edit"></i></a>  /  <button class="links" (click)="deleteFase(fase)"><i class="far fa-trash-alt"></i></button></td>               
+          </tr>               
+        </tbody>    
+    </table>
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

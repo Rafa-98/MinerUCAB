@@ -1,0 +1,94 @@
+const express = require('express');
+const morgan = require('morgan');
+const routes_mineral = require('./routes/mineral_routes');
+const routes_rel_min = require('./routes/rel_min_routes');
+const routes_yacimiento = require('./routes/yacimiento_routes');
+const routes_aliado = require('./routes/aliado_routes');
+const routes_lugar = require('./routes/lugar_routes');
+const routes_tipo_pago = require('./routes/tipo_pago_routes');
+const routes_cliente = require('./routes/cliente_routes');
+const routes_privilegio = require('./routes/privilegio_routes');
+const routes_yac_min = require('./routes/yac_min_routes');
+const routes_almacen = require('./routes/almacen_routes');
+const routes_presentacion = require('./routes/presentacion_routes');
+const routes_min_pre = require('./routes/min_pre_routes');
+const routes_turno = require('./routes/turno_routes');
+const routes_orden_venta = require('./routes/orden_venta_routes');
+const routes_orden_compra = require('./routes/orden_compra_routes');
+const routes_empleado = require('./routes/empleado_routes');
+const routes_usuario = require('./routes/usuario_routes');
+const routes_explotacion = require('./routes/explotacion_routes');
+const routes_cargo = require('./routes/cargo_routes');
+const routes_rol = require('./routes/rol_routes');
+const routes_etapa = require('./routes/etapa_routes');
+const routes_emp_turno = require('./routes/emp_turno_routes');
+const routes_ali_min = require('./routes/ali_min_routes');
+const routes_pedido = require('./routes/pedido_routes');
+const routes_movimiento = require('./routes/movimiento_routes');
+const routes_fase = require('./routes/fase_routes');
+const routes_min_alm = require('./routes/min_alm_routes');
+const routes_maquina = require('./routes/maquina_routes');
+const routes_fact_min = require('./routes/fact_mineral_routes');
+const routes_tipo_maquina = require('./routes/tipo_maquina_routes');
+const router_pago = require('./routes/pago_routes');
+const routes_fase_conf = require('./routes/fase_conf_routes');
+const routes_maq_conf = require('./routes/maq_conf_routes');
+const routes_fase_maq = require('./routes/fase_maq_routes');
+const routes_report = require('./routes/reporte_routes');
+const routes_conf_car = require('./routes/conf_car_routes');
+const routes_emp_fase = require('./routes/empleado_fase_routes');
+const routes_rol_pri = require('./routes/rol_pri_routes');
+const cors = require('cors');
+//----------initializations-----------------
+const app = express();
+//---------settings-------------------------
+app.set('port', process.env.PORT || 3000);
+
+//-------------middlewares---------------------
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(cors({origin : 'http://localhost:4200'}));
+
+//-------------routes----------------------
+app.use('/api/mineral',routes_mineral);
+app.use('/api/relmin',routes_rel_min);
+app.use('/api/yacimiento',routes_yacimiento);
+app.use('/api/aliado',routes_aliado);
+app.use('/api/lugar',routes_lugar);
+app.use('/api/tipopago',routes_tipo_pago);
+app.use('/api/cliente',routes_cliente);
+app.use('/api/privilegio',routes_privilegio);
+app.use('/api/yacmin',routes_yac_min);
+app.use('/api/almacen',routes_almacen);
+app.use('/api/presentacion',routes_presentacion);
+app.use('/api/minpre',routes_min_pre);
+app.use('/api/turno',routes_turno);
+app.use('/api/ordenventa',routes_orden_venta);
+app.use('/api/ordencompra',routes_orden_compra);
+app.use('/api/empleado',routes_empleado);
+app.use('/api/usuario',routes_usuario);
+app.use('/api/explotacion',routes_explotacion);
+app.use('/api/cargo',routes_cargo);
+app.use('/api/rol',routes_rol);
+app.use('/api/etapa',routes_etapa);
+app.use('/api/empturno',routes_emp_turno);
+app.use('/api/alimin',routes_ali_min);
+app.use('/api/pedido',routes_pedido);
+app.use('/api/movimiento',routes_movimiento);
+app.use('/api/fase',routes_fase);
+app.use('/api/minalm',routes_min_alm);
+app.use('/api/maquina',routes_maquina);
+app.use('/api/factmin',routes_fact_min);
+app.use('/api/tipomaquina',routes_tipo_maquina);
+app.use('/api/pago', router_pago);
+app.use('/api/faseconf',routes_fase_conf);
+app.use('/api/maqconf',routes_maq_conf);
+app.use('/api/fasemaq',routes_fase_maq);
+app.use('/api/reporte',routes_report);
+app.use('/api/confcar',routes_conf_car);
+app.use('/api/empfase',routes_emp_fase);
+app.use('/api/rolpri',routes_rol_pri);
+//----------------starting the server----------------------
+app.listen(app.get('port'), () => {
+    console.log('Server on port:', app.get('port'));
+});

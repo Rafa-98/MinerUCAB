@@ -1,0 +1,104 @@
+<app-header></app-header>
+
+<br>
+
+  <div class="container">
+      <h1>{{caso}} Empleado</h1>
+
+      <hr><br>
+
+      <div class="row">
+          
+        <div class="col-sm-12 col-md-6 col-bg-4">
+            <label>Nombre del Empleado:</label>
+            <input class="form-control form-control-md" type="text" name="nombre" [(ngModel)]="empleado[0].nombre" placeholder="Nombre">
+            <br>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-bg-4">
+            <label>Apellido del Empleado:</label>
+            <input class="form-control form-control-md" type="text" name="apellido" [(ngModel)]="empleado[0].apellido" placeholder="Apellido">
+            <br>
+        </div>        
+
+      </div>
+
+      <div class="row">
+          <div class="col-sm-12 col-md-6 col-bg-4">
+              <label>Salario ($):</label>
+              <input class="form-control form-control-md" type="text" name="apellido" [(ngModel)]="empleado[0].salario" placeholder="Salario">
+              <br>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-12 col-md-6 col-bg-4">              
+              <div class="form-group">
+                  <label for="exampleFormControlSelect1">Seleccione Cargo</label>
+                  <select class="form-control" name="estado" [(ngModel)]="cargo[0].nombre" id="exampleFormControlSelect1">
+                    <option>Escoger Opción</option>
+                    <option *ngFor="let cargo of cargos" style="color:black">
+                      <div>{{cargo.id}}-{{cargo.nombre}}</div>
+                    </option>
+                  </select>
+              </div>
+          </div>
+      </div>
+
+      <!------------------------------------------DIRECCION---------------------------->
+
+      <h3>Dirección del Empleados</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Estado</label>
+            <select class="form-control" name="estado" [(ngModel)]="estado[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let estado of estados" style="color:black">
+                <div>{{estado.l_clave}}-{{estado.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="margin-top: 6px" (click)="buscarMunicipios()">
+            Desplegar Municipios
+          </button>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Municipio</label>
+            <select class="form-control" name="municipio" [(ngModel)]="municipio[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let municipio of municipios">
+                <div>{{municipio.l_clave}}-{{municipio.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="margin-top: 6px" (click)="buscarParroquias()">
+            Desplegar Parroquias
+          </button>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Seleccione Parroquia</label>
+            <select class="form-control" name="parroquia" [(ngModel)]="parroquia[0].nombre" id="exampleFormControlSelect1">
+              <option>Escoger Opción</option>
+              <option *ngFor="let parroquia of parroquias">
+                <div>{{parroquia.l_clave}}-{{parroquia.l_nombre}}</div>
+              </option>
+            </select>
+          </div>
+        </div>        
+      </div>
+      <br><br>
+
+      <!---------------------------------------------------------------------------------->
+
+      <button type="button" class="btn btn-primary" (click)="agregarEmpleado()">{{caso}}</button>
+    
+  </div>
+
+<br>
+
+<app-footer></app-footer>

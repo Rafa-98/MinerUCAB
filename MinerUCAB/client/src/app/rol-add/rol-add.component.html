@@ -1,0 +1,18 @@
+<app-header></app-header>
+<br>
+
+  <div class="container">
+
+      <div class="col-sm-12 col-md-6 col-bg-4">
+          <label>Nombre del Rol:</label>
+          <input class="form-control form-control-md" type="text" name="nombre" [(ngModel)]="rol[0].nombre" placeholder="Rol">
+          <br>
+      </div>
+
+      <button (click)="agregarRol()" class="btn btn-primary">{{caso}}</button>
+
+  </div>
+
+<br>
+
+<app-footer></app-footer>

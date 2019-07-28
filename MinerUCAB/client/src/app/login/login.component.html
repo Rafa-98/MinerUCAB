@@ -1,0 +1,62 @@
+<div class="container-fluid bg-primary">
+  <br/><br/><br/>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+      <img src="./../../assets/logos/Logo2-3.2.jpg"/>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 offset-4">
+      <div *ngIf="loading == true" class="div">
+        <h3>Cargando Información</h3>
+        <div class="spinner-border text-danger" role="status">
+          <span class="sr-only">loading...</span>
+        </div>   
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-6 col-lg-4 py-5">
+      <form class="form-signin">
+        <h1 class="h3 font-weight-normal text-center">Ingreso</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" id="inputEmail" name="user" [(ngModel)]="usuario.login" class="form-control" placeholder="Usuario" required autofocus/>
+        <br>
+        <label for="inputPassword" class="sr-only">Password</label>        
+        <input type="password" id="inputPassword" name="pssword" [(ngModel)]="usuario.password" class="form-control" placeholder="Contraseña" required/>
+        <div *ngIf="error == true">          
+          <div style="color:red; margin-top: 2px" >Usuario y/o contraseña incorrecta, por favor intente de nuevo</div>           
+        </div>
+        <div class="checkbox mb-3">
+          <br>
+          <label>
+            <input type="checkbox" value="remember-me" /> Recuerdame
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" (click) = 'exLogin()' type="submit">
+          Entrar
+        </button>
+        <p></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container justify-content-center">
+  <div *ngIf="loading == true" class="div">
+    <h3>Cargando Información</h3>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>   
+  </div>
+</div>
+
+<div class="container-fluid bg-primary .text-white align-items-center">
+  <div class="row">
+    <div class="col-12">
+      <p class="text-light text-center mt-3">&copy; 2019 TechFirst</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<br>
+
+<div class="container">
+  <h1>{{caso}} Mineral</h1>
+  
+  <hr><br>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-bg-4">
+      <label>Nombre del Mineral:</label>
+      <input class="form-control form-control-md" type="text" name="nombre" [(ngModel)]="mineral[0].nombre" placeholder="Nombre">
+      <br>
+        
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Seleccionar tipo de mineral</label>
+        <select class="form-control col-md-5" name="tipo" [(ngModel)]="mineral[0].tipo" id="exampleFormControlSelect1" [disabled]="false">              
+          <option>Metal</option>
+          <option>No Metal</option>              
+        </select>
+      </div>      
+        
+      <label>Conductividad (SOLO PARA METALES):</label>
+      <input class="form-control form-control-md" type="text" name="desc" [(ngModel)]="mineral[0].conductividad" placeholder="Ej: 3000, 5698, 43000">
+      <br>
+      <label>Estado (SOLO PARA NO METALES):</label>
+      <input class="form-control form-control-md" type="text" name="desc" [(ngModel)]="mineral[0].estado" placeholder="Ej: Solido, Liquido, Gaseoso">                            
+      <br>      
+
+      <div class="form-group">
+        <label>Descripción del Mineral:</label>
+          <textarea name="description" [(ngModel)]="mineral[0].descripcion" placeholder="Descripcion del Mineral" rows="3" class="form-control"></textarea>
+      </div>
+
+
+      <label>Costo base del Mineral ($/Kg)</label>
+      <input class="form-control form-control-md" type="text" name="costo" [(ngModel)]="mineral[0].costo" placeholder="Costo base ($/Kg)">
+      <br>
+
+      <button type="button" class="btn btn-primary" (click)="agregarMineral()">{{caso}}</button>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<app-footer></app-footer>

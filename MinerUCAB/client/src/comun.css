@@ -1,0 +1,12 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color:rgb(217, 35, 15);
+}
+
+.separacion{
+    margin-top:-.5rem;
+}

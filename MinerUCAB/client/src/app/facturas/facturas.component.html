@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<div class="container">
+
+  <!-------------------------- FACTURAS ----------------------------------------------->
+
+  <div>
+
+    <h1 class="text-center">Facturas</h1>
+    <hr>
+
+    <div class="row">
+
+      <div class="offset-2 col-md-4">
+        <div class="text-center">
+          <h2>Ventas</h2>
+          <hr>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="text-center">
+          <h2>Compras</h2>
+          <hr>
+        </div>
+      </div>
+
+      <div class="offset-2 col-md-4">
+        <button (click)="gotoFactPro('Venta')"><i class="fas fa-dollar-sign" style="font-size:25px; margin-right: 5px"></i>Ventas Procesadas</button>
+      </div>
+
+      <div class="col-md-4">
+        <button (click)="gotoFactPro('Compra')"><i class="fas fa-file-invoice-dollar" style="font-size:25px; margin-right: 5px"></i>Compras Procesadas</button>
+      </div>        
+
+    </div>
+
+    <br><br>
+
+    <div class="row">
+
+        <div class="offset-2 col-md-4">
+            <button (click)="gotoFactPen('Venta')"><i class="fas fa-dollar-sign" style="font-size:25px; margin-right: 5px"></i>Ventas Pendientes</button>
+          </div>
+  
+          <div class="col-md-4">
+            <button (click)="gotoFactPen('Compra')"><i class="fas fa-file-invoice-dollar" style="font-size:25px; margin-right: 5px"></i>Compras Pendientes</button>
+          </div>
+
+    </div>
+  </div>
+
+  <!----------------------------------------- ----------------------------------------------->
+
+</div>
+
+<br>
+
+<app-footer></app-footer>
